@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="/assets/css/main.css">
+    <link rel="stylesheet" href="/assets/css/font-awesome.min.css">
+
+    <link rel="shortcut icon" href="/favicon.ico?1">
+    <!-- Begin Jekyll SEO tag v2.5.0 -->
+<title>Recap of String class | Anisike</title>
+<meta name="generator" content="Jekyll v3.8.5" />
+<meta property="og:title" content="Recap of String class" />
+<meta name="author" content="Prashantha HJ" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="A website primarily intended for writing personal notes on the technologies I learn everyday." />
+<meta property="og:description" content="A website primarily intended for writing personal notes on the technologies I learn everyday." />
+<link rel="canonical" href="http://localhost:4000/blog/2020/05/02/Recap_String_StringBuffer/" />
+<meta property="og:url" content="http://localhost:4000/blog/2020/05/02/Recap_String_StringBuffer/" />
+<meta property="og:site_name" content="Anisike" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-05-02T00:00:00+02:00" />
+<script type="application/ld+json">
+{"@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/blog/2020/05/02/Recap_String_StringBuffer/"},"author":{"@type":"Person","name":"Prashantha HJ"},"url":"http://localhost:4000/blog/2020/05/02/Recap_String_StringBuffer/","headline":"Recap of String class","dateModified":"2020-05-02T00:00:00+02:00","datePublished":"2020-05-02T00:00:00+02:00","description":"A website primarily intended for writing personal notes on the technologies I learn everyday.","@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+    <link rel="alternate" type="application/rss+xml" title="Anisike" href="http://localhost:4000/feed.xml" />
+</head>
+
+
+<body>
+
+    <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container navbar-container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+            <a class="navbar-brand" href="/">
+                <span><img src="/assets/img/logonav.png" alt="Logo"></span> Anisike
+            </a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+                <li ><a href="/docs/home/">Docs</a></li>
+                <li  class="active" ><a href="/blog/2020/05/02/Recap_String_StringBuffer/">Blog</a></li>
+            </ul>
+            <div class="navbar-right">
+                <form class="navbar-form navbar-left">
+                    <div class="form-group has-feedback">
+                        <input id="search-box" type="search" class="form-control" placeholder="Search...">
+                        <i class="fa fa-search form-control-feedback"></i>
+                    </div>
+                </form>
+                <ul class="nav navbar-nav">
+                    <li><a href=""><i class="fa fa-github" aria-hidden="true"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</nav>
+
+
+    <div class="page-content">
+        <div class="wrapper">
+            <div class="container">
+    <div class="row">
+
+        <div class="col-md-4">
+            <div class="well">
+                <h4>RECENT POSTS</h4>
+                <ul class="list-unstyled post-list-container">
+                    
+                    <li><a href="/blog/2020/05/02/Recap_String_StringBuffer/"  class="active" >Recap of String class</a></li>
+                    
+                    <li><a href="/allposts">All posts ...</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="col-md-8">
+            <h1>Recap of String class</h1>
+            <p>May 2, 2020 • Prashantha HJ</p>
+            <div  id="markdown-content-container"><hr />
+<ul id="markdown-toc">
+  <li><a href="#creating-of-strings" id="markdown-toc-creating-of-strings">Creating of Strings</a></li>
+  <li><a href="#concatenation-of-string" id="markdown-toc-concatenation-of-string">Concatenation of String</a></li>
+  <li><a href="#string-pool" id="markdown-toc-string-pool">String Pool</a></li>
+  <li><a href="#important-string-methods" id="markdown-toc-important-string-methods">Important String Methods</a>    <ul>
+      <li><a href="#length" id="markdown-toc-length">length()</a></li>
+      <li><a href="#charat" id="markdown-toc-charat">charAt()</a></li>
+      <li><a href="#indexof" id="markdown-toc-indexof">indexOf()</a></li>
+      <li><a href="#substring" id="markdown-toc-substring">subString()</a></li>
+      <li><a href="#tolowercase-and-touppercase" id="markdown-toc-tolowercase-and-touppercase">toLowerCase() and toUpperCase()</a></li>
+      <li><a href="#equals-and-equalsignorecase" id="markdown-toc-equals-and-equalsignorecase">equals() and equalsIgnoreCase()</a></li>
+      <li><a href="#startswith-and-endswith" id="markdown-toc-startswith-and-endswith">startsWith() and endsWith()</a></li>
+      <li><a href="#contains" id="markdown-toc-contains">contains()</a></li>
+      <li><a href="#replace" id="markdown-toc-replace">replace()</a></li>
+      <li><a href="#trim" id="markdown-toc-trim">trim()</a></li>
+      <li><a href="#method-chaining" id="markdown-toc-method-chaining">Method chaining</a></li>
+    </ul>
+  </li>
+  <li><a href="#string-api" id="markdown-toc-string-api">String API</a></li>
+</ul>
+<hr />
+
+<h2 id="creating-of-strings">Creating of Strings</h2>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">String</span> <span class="n">s</span> <span class="o">=</span> <span class="s">"It is a String"</span><span class="o">;</span>
+<span class="nc">String</span> <span class="n">another</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">String</span><span class="o">(</span><span class="s">"Another String"</span><span class="o">);</span>
+</code></pre></div></div>
+<p>There is a subtle difference. The first one uses String Pool.</p>
+
+<h2 id="concatenation-of-string">Concatenation of String</h2>
+<p><em>Rules</em></p>
+<ol>
+  <li>If both operands are numeric, + means <strong>addition</strong>.</li>
+  <li>If either operant is String, + means <strong>Concatenation</strong>.</li>
+  <li>The expression is evaluated <strong>left to right</strong>.</li>
+</ol>
+
+<p><strong>Examples</strong></p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="mi">1</span><span class="o">+</span><span class="mi">2</span><span class="o">);</span> <span class="c1">//3</span>
+<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="mi">1</span><span class="o">+</span><span class="s">"2"</span><span class="o">);</span> <span class="c1">//12</span>
+<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"a"</span><span class="o">+</span><span class="s">"b"</span><span class="o">+</span><span class="mi">3</span><span class="o">);</span> <span class="c1">//ab3</span>
+<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="mi">1</span><span class="o">+</span><span class="mi">2</span><span class="o">+</span><span class="mi">3</span><span class="o">+</span><span class="s">"4"</span><span class="o">);</span> <span class="c1">//64</span>
+</code></pre></div></div>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">int</span> <span class="n">three</span> <span class="o">=</span> <span class="mi">3</span><span class="o">;</span>
+<span class="nc">String</span> <span class="n">four</span> <span class="o">=</span> <span class="s">"4"</span><span class="o">;</span>
+<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="mi">1</span><span class="o">+</span><span class="mi">2</span><span class="o">+</span><span class="n">three</span><span class="o">+</span><span class="n">four</span><span class="o">);</span> <span class="c1">//64</span>
+</code></pre></div></div>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">String</span> <span class="n">s</span> <span class="o">=</span> <span class="s">"1"</span><span class="o">;</span>
+<span class="n">s</span> <span class="o">+=</span> <span class="mi">2</span><span class="o">;</span> <span class="c1">//12</span>
+<span class="n">s</span> <span class="o">+=</span> <span class="mi">3</span><span class="o">;</span> <span class="c1">//123</span>
+</code></pre></div></div>
+<p>You know String is Immutable. It is final class and all it’s methods return a new String.</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">String</span> <span class="n">s</span> <span class="o">=</span> <span class="s">"1"</span><span class="o">;</span>
+<span class="nc">String</span> <span class="n">s1</span> <span class="o">=</span> <span class="n">s</span><span class="o">.</span><span class="na">concat</span><span class="o">(</span><span class="s">"2"</span><span class="o">);</span>
+<span class="n">s1</span><span class="o">.</span><span class="na">concat</span><span class="o">(</span><span class="s">"3"</span><span class="o">);</span>
+<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">s1</span><span class="o">);</span> <span class="c1">//What does it print??</span>
+</code></pre></div></div>
+<div class="btn-group">
+  <a href="#" class="btn btn-default">Answer</a>
+  <a href="#" class="btn btn-default dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></a>
+  <ul class="dropdown-menu">
+    <li><a href="#">12</a></li>
+  </ul>
+</div>
+
+<h2 id="string-pool">String Pool</h2>
+<p>For performance improvement java creates a pool of String literals that are used in the Application. A String literal <em>String s = “A Literal”</em>. If already this literal is there in the pool, it is allocated to variable s. But in case of <em>String s = new String(“A new Object”)</em> an actual new String object is created solely for this variable.</p>
+
+<h2 id="important-string-methods">Important String Methods</h2>
+<p>Just remember</p>
+<ul>
+  <li>String is a sequence of characters.</li>
+  <li>Java counts from Index 0.</li>
+</ul>
+
+<table>
+  <thead>
+    <tr>
+      <th>a</th>
+      <th>n</th>
+      <th>i</th>
+      <th>m</th>
+      <th>a</th>
+      <th>l</th>
+      <th>s</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>0</td>
+      <td>1</td>
+      <td>2</td>
+      <td>3</td>
+      <td>4</td>
+      <td>5</td>
+      <td>6</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="length">length()</h4>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">String</span> <span class="n">s</span> <span class="o">=</span> <span class="s">"animals"</span><span class="o">;</span>
+<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">s</span><span class="o">.</span><span class="na">length</span><span class="o">());</span> <span class="c1">//7</span>
+</code></pre></div></div>
+
+<h4 id="charat">charAt()</h4>
+
+<p>method signature is</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>char charAt(int index)
+</code></pre></div></div>
+<p>So</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">String</span> <span class="n">s</span> <span class="o">=</span> <span class="s">"animals"</span><span class="o">;</span>
+<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">s</span><span class="o">.</span><span class="na">charAt</span><span class="o">(</span><span class="mi">0</span><span class="o">));</span> <span class="c1">// a</span>
+<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">s</span><span class="o">.</span><span class="na">charAt</span><span class="o">(</span><span class="mi">5</span><span class="o">));</span> <span class="c1">// l</span>
+<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">s</span><span class="o">.</span><span class="na">charAt</span><span class="o">(</span><span class="mi">7</span><span class="o">));</span> <span class="c1">// StringArrayIndexOutOfBounds Exception. Trys to access 8th char but string has only 7 characters</span>
+</code></pre></div></div>
+<h4 id="indexof">indexOf()</h4>
+
+<p>The method indexOf() looks at the characters in the string and finds the first index that
+matches the desired value. indexOf can work with an individual character or a whole String
+as input. It can also start from a requested position. The method signatures are as follows:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>int indexOf(char ch)
+int indexOf(char ch, index fromIndex)
+int indexOf(String str)
+int indexOf(String str, index fromIndex)
+</code></pre></div></div>
+
+<p>Let’s see the code example..</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">String</span> <span class="n">string</span> <span class="o">=</span> <span class="s">"animals"</span><span class="o">;</span>
+<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">string</span><span class="o">.</span><span class="na">indexOf</span><span class="o">(</span><span class="sc">'a'</span><span class="o">));</span> <span class="c1">// 0</span>
+<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">string</span><span class="o">.</span><span class="na">indexOf</span><span class="o">(</span><span class="s">"al"</span><span class="o">));</span> <span class="c1">// 4</span>
+<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">string</span><span class="o">.</span><span class="na">indexOf</span><span class="o">(</span><span class="sc">'a'</span><span class="o">,</span> <span class="mi">4</span><span class="o">));</span> <span class="c1">// 4</span>
+<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">string</span><span class="o">.</span><span class="na">indexOf</span><span class="o">(</span><span class="s">"al"</span><span class="o">,</span> <span class="mi">5</span><span class="o">));</span> <span class="c1">// -1</span>
+</code></pre></div></div>
+<p>Method starts from the fromIndex (if not given assumes as 0) and tries to find the whole String given. Returns the position of that if found else -1. No Exception is thrown.</p>
+
+<h4 id="substring">subString()</h4>
+
+<p>This returns a subset of the String by slicing from ‘beginIndex’ (inclusive) till ‘endIndex’ (exclusive). Throws exception if the slicing is not possible eighther the given index is wrong or crosses the limit or length of the string.</p>
+
+<p>method signature is as below</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>String substring(int beginIndex)
+String substring(int beginIndex, int endIndex)
+</code></pre></div></div>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">String</span> <span class="n">string</span> <span class="o">=</span> <span class="s">"animals"</span><span class="o">;</span>
+<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">string</span><span class="o">.</span><span class="na">substring</span><span class="o">(</span><span class="mi">3</span><span class="o">));</span> <span class="c1">// mals</span>
+<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">string</span><span class="o">.</span><span class="na">substring</span><span class="o">(</span><span class="n">string</span><span class="o">.</span><span class="na">indexOf</span><span class="o">(</span><span class="sc">'m'</span><span class="o">)));</span> <span class="c1">// mals</span>
+<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">string</span><span class="o">.</span><span class="na">substring</span><span class="o">(</span><span class="mi">3</span><span class="o">,</span> <span class="mi">4</span><span class="o">));</span> <span class="c1">// m</span>
+<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">string</span><span class="o">.</span><span class="na">substring</span><span class="o">(</span><span class="mi">3</span><span class="o">,</span> <span class="mi">7</span><span class="o">));</span> <span class="c1">// mals</span>
+
+<span class="c1">//Some more</span>
+<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">string</span><span class="o">.</span><span class="na">substring</span><span class="o">(</span><span class="mi">3</span><span class="o">,</span> <span class="mi">3</span><span class="o">));</span> <span class="c1">// empty string</span>
+<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">string</span><span class="o">.</span><span class="na">substring</span><span class="o">(</span><span class="mi">3</span><span class="o">,</span> <span class="mi">2</span><span class="o">));</span> <span class="c1">// throws exception</span>
+<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">string</span><span class="o">.</span><span class="na">substring</span><span class="o">(</span><span class="mi">3</span><span class="o">,</span> <span class="mi">8</span><span class="o">));</span> <span class="c1">// throws exception</span>
+</code></pre></div></div>
+
+<h4 id="tolowercase-and-touppercase">toLowerCase() and toUpperCase()</h4>
+
+<p>Singnature</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>String toLowerCase(String str)
+String toUpperCase(String str)
+</code></pre></div></div>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">String</span> <span class="n">string</span> <span class="o">=</span> <span class="s">"animals"</span><span class="o">;</span>
+<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">string</span><span class="o">.</span><span class="na">toUpperCase</span><span class="o">());</span> <span class="c1">// ANIMALS</span>
+<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Abc123"</span><span class="o">.</span><span class="na">toLowerCase</span><span class="o">());</span> <span class="c1">// abc123</span>
+</code></pre></div></div>
+
+<h4 id="equals-and-equalsignorecase">equals() and equalsIgnoreCase()</h4>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>String equals(String str)
+String equalsIgnoreCase(String str)
+</code></pre></div></div>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"abc"</span><span class="o">.</span><span class="na">equals</span><span class="o">(</span><span class="s">"ABC"</span><span class="o">));</span> <span class="c1">// false</span>
+<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"ABC"</span><span class="o">.</span><span class="na">equals</span><span class="o">(</span><span class="s">"ABC"</span><span class="o">));</span> <span class="c1">// true</span>
+<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"abc"</span><span class="o">.</span><span class="na">equalsIgnoreCase</span><span class="o">(</span><span class="s">"ABC"</span><span class="o">));</span> <span class="c1">// true</span>
+</code></pre></div></div>
+
+<h4 id="startswith-and-endswith">startsWith() and endsWith()</h4>
+
+<p>The startsWith() and endsWith() methods look at whether the provided value matches
+part of the String. The method signatures are as follows:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>boolean startsWith(String prefix)
+boolean endsWith(String suffix)
+</code></pre></div></div>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"abc"</span><span class="o">.</span><span class="na">startsWith</span><span class="o">(</span><span class="s">"a"</span><span class="o">));</span> <span class="c1">// true</span>
+<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"abc"</span><span class="o">.</span><span class="na">startsWith</span><span class="o">(</span><span class="s">"A"</span><span class="o">));</span> <span class="c1">// false</span>
+<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"abc"</span><span class="o">.</span><span class="na">endsWith</span><span class="o">(</span><span class="s">"c"</span><span class="o">));</span> <span class="c1">// true</span>
+<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"abc"</span><span class="o">.</span><span class="na">endsWith</span><span class="o">(</span><span class="s">"a"</span><span class="o">));</span> <span class="c1">// false</span>
+</code></pre></div></div>
+
+<h4 id="contains">contains()</h4>
+<p>similar to startsWith() and endsWith() but just does’nt care start or end. It should match anywhere.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>boolean contains(String str)
+</code></pre></div></div>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"abc"</span><span class="o">.</span><span class="na">contains</span><span class="o">(</span><span class="s">"b"</span><span class="o">));</span> <span class="c1">// true</span>
+<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"abc"</span><span class="o">.</span><span class="na">contains</span><span class="o">(</span><span class="s">"B"</span><span class="o">));</span> <span class="c1">// false</span>
+</code></pre></div></div>
+
+<h4 id="replace">replace()</h4>
+<p>searches the string/char and replaces everywhere.</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>String replace(char oldChar, char newChar)
+String replace(CharSequence oldChar, CharSequence newChar)
+</code></pre></div></div>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"abcabc"</span><span class="o">.</span><span class="na">replace</span><span class="o">(</span><span class="sc">'a'</span><span class="o">,</span> <span class="sc">'A'</span><span class="o">));</span> <span class="c1">// AbcAbc</span>
+<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"abcabc"</span><span class="o">.</span><span class="na">replace</span><span class="o">(</span><span class="s">"a"</span><span class="o">,</span> <span class="s">"A"</span><span class="o">));</span> <span class="c1">// AbcAbc</span>
+</code></pre></div></div>
+
+<h4 id="trim">trim()</h4>
+<p>The trim() method removes whitespace from the beginning and end
+of a String.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>public String trim()
+</code></pre></div></div>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"abc"</span><span class="o">.</span><span class="na">trim</span><span class="o">());</span> <span class="c1">// abc</span>
+<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"\t a b c\n"</span><span class="o">.</span><span class="na">trim</span><span class="o">());</span> <span class="c1">// a b c</span>
+</code></pre></div></div>
+
+<h3 id="method-chaining">Method chaining</h3>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">String</span> <span class="n">result</span> <span class="o">=</span> <span class="s">"AniMaL "</span><span class="o">.</span><span class="na">trim</span><span class="o">().</span><span class="na">toLowerCase</span><span class="o">().</span><span class="na">replace</span><span class="o">(</span><span class="sc">'a'</span><span class="o">,</span> <span class="sc">'A'</span><span class="o">).</span><span class="na">toUpperCase</span><span class="o">();</span>
+<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">result</span><span class="o">);</span> <span class="c1">//ANIMAL</span>
+</code></pre></div></div>
+
+<p>This is just a series of String methods. Each time one is called, the returned value is put
+in a new variable. There are five String values along the way, and ANIMAL is output.</p>
+
+<h2 id="string-api"><a href="https://docs.oracle.com/javase/9/docs/api/java/lang/String.html">String API</a></h2>
+</div>
+            <hr>
+            <ul class="pager">
+                 
+            </ul>
+        </div>
+
+    </div>
+</div>
+
+        </div>
+    </div>
+
+    <footer class="footer">
+    <div class="container">
+
+        <p class="text-center">
+            Anisike 2020 |
+            Powered by <a href="https://github.com/aksakalli/jekyll-doc-theme">Jekyll Doc Theme</a>
+        </p>
+        <!-- <p class="text-muted">Place sticky footer content here.</p> -->
+    </div>
+</footer>
+
+    <script>
+  var baseurl = ''
+</script>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+<script src="/assets/js/bootstrap.min.js "></script>
+<script src="/assets/js/typeahead.bundle.min.js "></script>
+
+<script src="/assets/js/main.js "></script>
+
+</body>
+
+</html>

@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="/assets/css/main.css">
+    <link rel="stylesheet" href="/assets/css/font-awesome.min.css">
+
+    <link rel="shortcut icon" href="/favicon.ico?1">
+    <!-- Begin Jekyll SEO tag v2.5.0 -->
+<title>Cloud Foundry | Anisike</title>
+<meta name="generator" content="Jekyll v3.8.5" />
+<meta property="og:title" content="Cloud Foundry" />
+<meta name="author" content="Prashantha HJ" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="A website primarily intended for writing personal notes on the technologies I learn everyday." />
+<meta property="og:description" content="A website primarily intended for writing personal notes on the technologies I learn everyday." />
+<link rel="canonical" href="http://localhost:4000/docs/cloudfoundry/" />
+<meta property="og:url" content="http://localhost:4000/docs/cloudfoundry/" />
+<meta property="og:site_name" content="Anisike" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-05-03T10:42:27+02:00" />
+<script type="application/ld+json">
+{"@type":"WebPage","author":{"@type":"Person","name":"Prashantha HJ"},"url":"http://localhost:4000/docs/cloudfoundry/","headline":"Cloud Foundry","dateModified":"2020-05-03T10:42:27+02:00","datePublished":"2020-05-03T10:42:27+02:00","description":"A website primarily intended for writing personal notes on the technologies I learn everyday.","@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+    <link rel="alternate" type="application/rss+xml" title="Anisike" href="http://localhost:4000/feed.xml" />
+</head>
+
+
+<body>
+
+    <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container navbar-container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+            <a class="navbar-brand" href="/">
+                <span><img src="/assets/img/logonav.png" alt="Logo"></span> Anisike
+            </a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+                <li  class="active" ><a href="/docs/home/">Docs</a></li>
+                <li ><a href="/blog/2020/05/02/Recap_String_StringBuffer/">Blog</a></li>
+            </ul>
+            <div class="navbar-right">
+                <form class="navbar-form navbar-left">
+                    <div class="form-group has-feedback">
+                        <input id="search-box" type="search" class="form-control" placeholder="Search...">
+                        <i class="fa fa-search form-control-feedback"></i>
+                    </div>
+                </form>
+                <ul class="nav navbar-nav">
+                    <li><a href=""><i class="fa fa-github" aria-hidden="true"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</nav>
+
+
+    <div class="page-content">
+        <div class="wrapper">
+            <div class="container">
+    <div class="row">
+        <div class="col-md-4">
+          <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+  
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse-1" aria-expanded="false" aria-controls="collapse-1">
+            Java
+          </a>
+        </h4>
+      </div>
+      
+      
+      <div class="panel-collapse collapse" id="collapse-1" role="tabpanel" aria-label="Side Navigation">
+        <div class="list-group">
+          
+            
+            
+            <a class="list-group-item " href="/docs/modernjava/">Modern Java</a>
+          
+            
+            
+            <a class="list-group-item " href="/docs/home/">All documents</a>
+          
+        </div>
+      </div>
+    </div>
+  
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse-2" aria-expanded="false" aria-controls="collapse-2">
+            Cloud Foundry
+          </a>
+        </h4>
+      </div>
+      
+      
+      <div class="panel-collapse" id="collapse-2" role="tabpanel" aria-label="Side Navigation">
+        <div class="list-group">
+          
+            
+            
+            <a class="list-group-item active" href="/docs/cloudfoundry/">Cloud Foundry</a>
+          
+        </div>
+      </div>
+    </div>
+  
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse-3" aria-expanded="false" aria-controls="collapse-3">
+            Database
+          </a>
+        </h4>
+      </div>
+      
+      
+      <div class="panel-collapse collapse" id="collapse-3" role="tabpanel" aria-label="Side Navigation">
+        <div class="list-group">
+          
+            
+            
+            <a class="list-group-item " href="/docs/sql/">SQL</a>
+          
+        </div>
+      </div>
+    </div>
+  
+</div>
+
+        </div>
+
+        <div class="col-md-8">
+            <h1>Cloud Foundry</h1>
+            <div id="markdown-content-container"><hr />
+<ol id="markdown-toc">
+  <li><a href="#cloud-foundry-introduction" id="markdown-toc-cloud-foundry-introduction">Cloud Foundry Introduction</a>    <ol>
+      <li><a href="#why-cloud-foundry" id="markdown-toc-why-cloud-foundry">Why Cloud Foundry?</a></li>
+      <li><a href="#what-is-paas" id="markdown-toc-what-is-paas">What is PaaS?</a></li>
+      <li><a href="#what-is-cloud-foundry" id="markdown-toc-what-is-cloud-foundry">What is Cloud Foundry?</a>        <ol>
+          <li><a href="#cloud-foundry-architecture" id="markdown-toc-cloud-foundry-architecture">Cloud foundry architecture</a>            <ol>
+              <li><a href="#cloud-foundry-overview" id="markdown-toc-cloud-foundry-overview">Cloud foundry overview</a></li>
+              <li><a href="#cloud-foundry-platform-architecture-overview" id="markdown-toc-cloud-foundry-platform-architecture-overview">Cloud foundry platform architecture overview</a></li>
+            </ol>
+          </li>
+        </ol>
+      </li>
+    </ol>
+  </li>
+  <li><a href="#cloud-foundry-cli-and-apps-manager" id="markdown-toc-cloud-foundry-cli-and-apps-manager">Cloud Foundry CLI and Apps Manager</a></li>
+  <li><a href="#users-orgs-spaces-and-roles" id="markdown-toc-users-orgs-spaces-and-roles">Users, Orgs, Spaces, and Roles</a></li>
+  <li><a href="#architecting-and-building-apps-for-the-cloud" id="markdown-toc-architecting-and-building-apps-for-the-cloud">Architecting and Building Apps for the Cloud</a></li>
+  <li><a href="#deploying-apps-to-cloud-foundry" id="markdown-toc-deploying-apps-to-cloud-foundry">Deploying Apps to Cloud Foundry</a></li>
+  <li><a href="#microservices-and-worker-applications" id="markdown-toc-microservices-and-worker-applications">Microservices and Worker Applications</a></li>
+  <li><a href="#services-and-service-brokers" id="markdown-toc-services-and-service-brokers">Services and Service Brokers</a></li>
+  <li><a href="#buildpacks" id="markdown-toc-buildpacks">Buildpacks</a></li>
+  <li><a href="#troubleshooting-applications-in-cloud-foundry" id="markdown-toc-troubleshooting-applications-in-cloud-foundry">Troubleshooting Applications in Cloud Foundry</a></li>
+  <li><a href="#continuous-integration-and-continuous-deployment" id="markdown-toc-continuous-integration-and-continuous-deployment">Continuous Integration and Continuous Deployment</a></li>
+</ol>
+<hr />
+
+<p><br /></p>
+
+<h3 id="cloud-foundry-introduction">Cloud Foundry Introduction</h3>
+
+<p><br /></p>
+
+<h4 id="why-cloud-foundry">Why Cloud Foundry?</h4>
+<ul>
+  <li>It is difficult to deliver applications that are valuable to you, your organization, and/or the world if you aren’t able to focus on building the application itself.</li>
+  <li>Application developers are not system administrators or system operators, nor should they be compelled to be.</li>
+  <li>It is hard to build a consistent, reliable, secure, and highly available production environment. Much more so by stitching together compute, storage, and network capacity into a cohesive system that meets the demands of modern enterprises and the expectations of application consumers.</li>
+</ul>
+
+<p>These are the problems that Cloud Foundry was made to address: ending the eternal battle of the developer’s focus on apps versus operating and engineering the platform that those applications are run upon.</p>
+
+<p>Cloud Foundry does this by bringing about enterprise-grade <strong>application virtualization.</strong> It does this by harnessing and orchestrating a symphony of containers into an elastically scalable distributed system comprising all of the components a given application needs to serve the world. This changes the game much the way VMware did with VMs and server virtualization. Cloud Foundry is a proven application virtualization platform that gives control back to the developer, allowing developers to focus on developing applications, instead of infrastructure operations.</p>
+
+<p><br /></p>
+
+<h4 id="what-is-paas">What is PaaS?</h4>
+<p>While, generally, <em>IaaS</em> is server focused and <em>SaaS</em> is user focused, <em>PaaS</em> is developer focused. PaaS enhances developer productivity by enabling <strong>application virtualization</strong>, so there is a significant reduction in the need for developers to perform the undifferentiated heavy lifting associated with the plumbing that detracts from the actual work on application code and concerns. Often this is called <strong>yak shaving.</strong> For instance, it may include everything from installing application runtimes, dependencies, app packaging, staging, and deployment, to configuring deeper down the stack into infrastructure concerns such as configuring load balancers, networking, security, provisioning VMs—nearly anything that takes your focus off building a great application.</p>
+
+<p><br /></p>
+
+<h4 id="what-is-cloud-foundry">What is Cloud Foundry?</h4>
+<p>Cloud Foundry is a platform for developing and running cloud-native applications. It is a polyglot platform that allows you to deploy a myriad of applications written in many different computer languages — Java, Python, Node.js, Ruby, Go, .NET languages, and many more. Simply use the best language for the task at hand with the freedom of knowing that Cloud Foundry supports it.</p>
+
+<p>Cloud Foundry is IaaS agnostic and open source. It abstracts away the underlying IaaS whether you run on VMware vSphere, Amazon Web Services (AWS), Google Cloud Platform (GCP), Microsoft Azure, OpenStack, or others. This means that true application portability is possible regardless of the infrastructure choices and it enables a consistent multi-cloud strategy — public, private, or hybrid.</p>
+
+<p>As a developer, Cloud Foundry does the following:</p>
+
+<ul>
+  <li>Enables you to focus on building applications</li>
+  <li>Moves you out of the VM provisioning game</li>
+  <li>Allows you to recreate an application’s runtime environment continuously</li>
+  <li>Deploys and scales an application in seconds</li>
+  <li>Externalizes and injects environment-specific dependencies</li>
+  <li>Has an API that enhances release management productivity</li>
+  <li>Uses containers to isolate apps and create application virtualization</li>
+  <li>Manages your application’s entire life cycle</li>
+</ul>
+
+<p>Some Cloud Foundry based PaaS providers have their own UI. PWS has Apps Manager UI.
+<br /></p>
+
+<h5 id="cloud-foundry-architecture">Cloud foundry architecture</h5>
+
+<p><br /></p>
+
+<h6 id="cloud-foundry-overview">Cloud foundry overview</h6>
+<p><img src="/assets/img/docs/cloudfoundry/architecture.png" alt="Alt Cloud Foundry overview" /></p>
+
+<p><br /></p>
+
+<h6 id="cloud-foundry-platform-architecture-overview">Cloud foundry platform architecture overview</h6>
+<p><img src="/assets/img/docs/cloudfoundry/platform_architecture.png" alt="Alt Cloud Foundry architecture" /></p>
+
+<p><br /></p>
+
+<h3 id="cloud-foundry-cli-and-apps-manager">Cloud Foundry CLI and Apps Manager</h3>
+
+<p>With the cf CLI, you get:</p>
+<ul>
+  <li>Simplified CI/CD</li>
+  <li>The ability to script automated tests, code, security, and compliance checks</li>
+  <li>Zero Downtime Deployments (ZDD), known as blue-green deployments, which give you A/B testing as a side effect.</li>
+  <li>Thorough troubleshooting when things go sideways with your application or deployment</li>
+  <li>A comprehensive set of capabilities that a UI can only wrap a subset of without being too complex to work in a simplified way</li>
+</ul>
+
+<p>Target API end point</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ cf api https://api.run.pivotal.io
+</code></pre></div></div>
+<p>Login</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ cf login
+</code></pre></div></div>
+<p>Deploy an application</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ cf push
+</code></pre></div></div>
+
+<p><br /></p>
+
+<h3 id="users-orgs-spaces-and-roles">Users, Orgs, Spaces, and Roles</h3>
+
+<p><br /></p>
+
+<h3 id="architecting-and-building-apps-for-the-cloud">Architecting and Building Apps for the Cloud</h3>
+
+<p><br /></p>
+
+<h3 id="deploying-apps-to-cloud-foundry">Deploying Apps to Cloud Foundry</h3>
+
+<p><br /></p>
+
+<h3 id="microservices-and-worker-applications">Microservices and Worker Applications</h3>
+
+<p><br /></p>
+
+<h3 id="services-and-service-brokers">Services and Service Brokers</h3>
+
+<p><br /></p>
+
+<h3 id="buildpacks">Buildpacks</h3>
+
+<p><br /></p>
+
+<h3 id="troubleshooting-applications-in-cloud-foundry">Troubleshooting Applications in Cloud Foundry</h3>
+
+<p><br /></p>
+
+<h3 id="continuous-integration-and-continuous-deployment">Continuous Integration and Continuous Deployment</h3>
+
+<p><br /></p>
+
+</div>
+            <div style="clear:both;">
+              <p class="text-center">
+                <br />
+                <a target="_blank" href="/_docs/cloudfoundry/cloudfoundry.md" class="btn btn-default" role="button">
+                  <i class="fa fa-pencil fa-lg"></i> Improve this page
+                </a>
+              </p>
+            </div>
+            <hr>
+            
+
+
+
+
+
+  
+  
+
+  
+  
+
+  
+  
+    <ul class="pager">
+      
+        
+        
+        <li class="previous">
+          <a href="/docs/home/">
+            <span aria-hidden="true">&larr;</span> Previous
+          </a>
+        </li>
+      
+
+      
+        
+        
+        <li class="next">
+          <a href="/docs/sql/">
+            Next <span aria-hidden="true">&rarr;</span>
+          </a>
+        </li>
+      
+      </ul>
+    <div class="clear"></div>
+    
+
+        </div>
+
+    </div>
+</div>
+
+        </div>
+    </div>
+
+    <footer class="footer">
+    <div class="container">
+
+        <p class="text-center">
+            Anisike 2020 |
+            Powered by <a href="https://github.com/aksakalli/jekyll-doc-theme">Jekyll Doc Theme</a>
+        </p>
+        <!-- <p class="text-muted">Place sticky footer content here.</p> -->
+    </div>
+</footer>
+
+    <script>
+  var baseurl = ''
+</script>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+<script src="/assets/js/bootstrap.min.js "></script>
+<script src="/assets/js/typeahead.bundle.min.js "></script>
+
+<script src="/assets/js/main.js "></script>
+
+</body>
+
+</html>

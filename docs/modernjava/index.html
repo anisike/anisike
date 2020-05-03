@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="/assets/css/main.css">
+    <link rel="stylesheet" href="/assets/css/font-awesome.min.css">
+
+    <link rel="shortcut icon" href="/favicon.ico?1">
+    <!-- Begin Jekyll SEO tag v2.5.0 -->
+<title>Modern Java | Anisike</title>
+<meta name="generator" content="Jekyll v3.8.5" />
+<meta property="og:title" content="Modern Java" />
+<meta name="author" content="Prashantha HJ" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="A website primarily intended for writing personal notes on the technologies I learn everyday." />
+<meta property="og:description" content="A website primarily intended for writing personal notes on the technologies I learn everyday." />
+<link rel="canonical" href="http://localhost:4000/docs/modernjava/" />
+<meta property="og:url" content="http://localhost:4000/docs/modernjava/" />
+<meta property="og:site_name" content="Anisike" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-05-03T10:42:27+02:00" />
+<script type="application/ld+json">
+{"@type":"WebPage","author":{"@type":"Person","name":"Prashantha HJ"},"url":"http://localhost:4000/docs/modernjava/","headline":"Modern Java","dateModified":"2020-05-03T10:42:27+02:00","datePublished":"2020-05-03T10:42:27+02:00","description":"A website primarily intended for writing personal notes on the technologies I learn everyday.","@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+    <link rel="alternate" type="application/rss+xml" title="Anisike" href="http://localhost:4000/feed.xml" />
+</head>
+
+
+<body>
+
+    <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container navbar-container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+            <a class="navbar-brand" href="/">
+                <span><img src="/assets/img/logonav.png" alt="Logo"></span> Anisike
+            </a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+                <li  class="active" ><a href="/docs/home/">Docs</a></li>
+                <li ><a href="/blog/2020/05/02/Recap_String_StringBuffer/">Blog</a></li>
+            </ul>
+            <div class="navbar-right">
+                <form class="navbar-form navbar-left">
+                    <div class="form-group has-feedback">
+                        <input id="search-box" type="search" class="form-control" placeholder="Search...">
+                        <i class="fa fa-search form-control-feedback"></i>
+                    </div>
+                </form>
+                <ul class="nav navbar-nav">
+                    <li><a href=""><i class="fa fa-github" aria-hidden="true"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</nav>
+
+
+    <div class="page-content">
+        <div class="wrapper">
+            <div class="container">
+    <div class="row">
+        <div class="col-md-4">
+          <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+  
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse-1" aria-expanded="false" aria-controls="collapse-1">
+            Java
+          </a>
+        </h4>
+      </div>
+      
+      
+      <div class="panel-collapse" id="collapse-1" role="tabpanel" aria-label="Side Navigation">
+        <div class="list-group">
+          
+            
+            
+            <a class="list-group-item active" href="/docs/modernjava/">Modern Java</a>
+          
+            
+            
+            <a class="list-group-item " href="/docs/home/">All documents</a>
+          
+        </div>
+      </div>
+    </div>
+  
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse-2" aria-expanded="false" aria-controls="collapse-2">
+            Cloud Foundry
+          </a>
+        </h4>
+      </div>
+      
+      
+      <div class="panel-collapse collapse" id="collapse-2" role="tabpanel" aria-label="Side Navigation">
+        <div class="list-group">
+          
+            
+            
+            <a class="list-group-item " href="/docs/cloudfoundry/">Cloud Foundry</a>
+          
+        </div>
+      </div>
+    </div>
+  
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse-3" aria-expanded="false" aria-controls="collapse-3">
+            Database
+          </a>
+        </h4>
+      </div>
+      
+      
+      <div class="panel-collapse collapse" id="collapse-3" role="tabpanel" aria-label="Side Navigation">
+        <div class="list-group">
+          
+            
+            
+            <a class="list-group-item " href="/docs/sql/">SQL</a>
+          
+        </div>
+      </div>
+    </div>
+  
+</div>
+
+        </div>
+
+        <div class="col-md-8">
+            <h1>Modern Java</h1>
+            <div id="markdown-content-container"><hr />
+<ol id="markdown-toc">
+  <li><a href="#whats-happening-in-java-8-9-10" id="markdown-toc-whats-happening-in-java-8-9-10">What’s happening (in java 8, 9, 10,..)</a>    <ol>
+      <li><a href="#some-quotes" id="markdown-toc-some-quotes">Some Quotes</a></li>
+    </ol>
+  </li>
+  <li><a href="#passing-code-with-behaviour-parameterization" id="markdown-toc-passing-code-with-behaviour-parameterization">Passing code with Behaviour Parameterization</a>    <ol>
+      <li><a href="#coping-with-requirement-changes" id="markdown-toc-coping-with-requirement-changes">Coping with requirement changes</a>        <ol>
+          <li><a href="#first-attempt" id="markdown-toc-first-attempt">First attempt</a></li>
+          <li><a href="#second-attempt-parameterizing-the-gender" id="markdown-toc-second-attempt-parameterizing-the-gender">Second attempt: parameterizing the gender</a></li>
+          <li><a href="#third-attempt---filtering-with-every-attribute" id="markdown-toc-third-attempt---filtering-with-every-attribute">Third attempt - filtering with every attribute</a></li>
+        </ol>
+      </li>
+      <li><a href="#behaviour-parameterization" id="markdown-toc-behaviour-parameterization">Behaviour Parameterization</a>        <ol>
+          <li><a href="#fourth-attempt---filtering-by-abstract-criteria" id="markdown-toc-fourth-attempt---filtering-by-abstract-criteria">Fourth attempt - filtering by abstract criteria</a></li>
+        </ol>
+      </li>
+      <li><a href="#tackling-verbocity" id="markdown-toc-tackling-verbocity">Tackling Verbocity</a>        <ol>
+          <li><a href="#anonymous-classes" id="markdown-toc-anonymous-classes">Anonymous Classes</a></li>
+          <li><a href="#fifth-attempt---using-an-anonymous-class" id="markdown-toc-fifth-attempt---using-an-anonymous-class">Fifth attempt - using an anonymous class</a></li>
+          <li><a href="#sixth-attempt---using-lambda-expressions" id="markdown-toc-sixth-attempt---using-lambda-expressions">Sixth attempt - using lambda expressions</a></li>
+          <li><a href="#seventh-attempt---abstracting-over-list-type" id="markdown-toc-seventh-attempt---abstracting-over-list-type">Seventh attempt - abstracting over <strong>List</strong> type</a></li>
+        </ol>
+      </li>
+      <li><a href="#summary" id="markdown-toc-summary">Summary</a></li>
+    </ol>
+  </li>
+  <li><a href="#lambda-expressions" id="markdown-toc-lambda-expressions">Lambda Expressions</a>    <ol>
+      <li><a href="#lambdas-in-a-nutshell" id="markdown-toc-lambdas-in-a-nutshell">Lambdas in a Nutshell</a></li>
+      <li><a href="#where-and-how-to-use-lambdas" id="markdown-toc-where-and-how-to-use-lambdas">Where and How to use Lambdas</a>        <ol>
+          <li><a href="#functional-interface" id="markdown-toc-functional-interface">Functional Interface</a></li>
+          <li><a href="#function-descriptor" id="markdown-toc-function-descriptor">Function Descriptor</a></li>
+        </ol>
+      </li>
+      <li><a href="#putting-lambdas-into-practice-the-execute-around-pattern" id="markdown-toc-putting-lambdas-into-practice-the-execute-around-pattern">Putting lambdas into practice: the execute-around pattern</a></li>
+    </ol>
+  </li>
+</ol>
+<hr />
+
+<h2 id="whats-happening-in-java-8-9-10">What’s happening (in java 8, 9, 10,..)</h2>
+
+<h3 id="some-quotes">Some Quotes</h3>
+<p><br /></p>
+
+<blockquote>
+  <p>Put simply, lambdas and their friends, method references, provide the ability to concisely pass code or methods as arguments to be executed in the middle of doing something  else.
+<br /></p>
+</blockquote>
+
+<blockquote>
+  <p>Java 8 streams support this concise database-queries style of programming—but with Java syntax and none of the need to know about databases! Second, streams are         designed so that not all their data needs to be in memory (or even computed) at once.
+<br /></p>
+</blockquote>
+
+<blockquote>
+  <p>Optional, Optionals. No more NULLs.
+<br /></p>
+</blockquote>
+
+<blockquote>
+  <p>Brand new time and date API from Java 8!</p>
+</blockquote>
+
+<p><br />
+<br /></p>
+
+<h2 id="passing-code-with-behaviour-parameterization">Passing code with Behaviour Parameterization</h2>
+
+<p>Behavior parameterization is a software development pattern that lets you handle frequent requirement changes. In a nutshell, it means taking a block         of code and making it available without executing it. This block of code can be called later by other parts of your programs,         which means that you can defer the execution of that block of code. For instance, you could pass the block of code as an argument         to another method that will execute it later. As a result, the method’s behavior is parameterized based on that block of code.         For example, if you process a collection, you may want to write a method that</p>
+
+<ul>
+  <li>Can do “something” for every element of a list</li>
+  <li>Can do “something else” when you finish processing the list</li>
+  <li>Can do “yet something else” if you encounter an error</li>
+</ul>
+
+<p>This is what Behaviour Parameterization refers to.</p>
+
+<p><br /></p>
+<h3 id="coping-with-requirement-changes">Coping with requirement changes</h3>
+
+<p>Imagine there is a HR application which wants to get a list of female employees from a list of all the employees.</p>
+
+<p><br /></p>
+<h4 id="first-attempt">First attempt</h4>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">enum</span> <span class="nc">Gender</span> <span class="o">{</span>
+	<span class="no">MALE</span><span class="o">,</span>
+	<span class="no">FEMALE</span>
+<span class="o">}</span>
+
+<span class="kd">class</span> <span class="nc">Employee</span> <span class="o">{</span>
+	<span class="kt">int</span> <span class="n">age</span><span class="o">;</span>
+	<span class="nc">String</span> <span class="n">name</span><span class="o">;</span>
+	<span class="nc">String</span> <span class="n">position</span><span class="o">;</span>
+	<span class="nc">Gender</span> <span class="n">gender</span><span class="o">;</span>
+	
+
+	<span class="kd">public</span> <span class="nf">Employee</span><span class="o">(</span><span class="kt">int</span> <span class="n">age</span><span class="o">,</span> <span class="nc">String</span> <span class="n">name</span><span class="o">,</span> <span class="nc">String</span> <span class="n">position</span><span class="o">,</span> <span class="nc">Gender</span> <span class="n">gender</span><span class="o">)</span> <span class="o">{</span>
+		<span class="kd">super</span><span class="o">();</span>
+		<span class="k">this</span><span class="o">.</span><span class="na">age</span> <span class="o">=</span> <span class="n">age</span><span class="o">;</span>
+		<span class="k">this</span><span class="o">.</span><span class="na">name</span> <span class="o">=</span> <span class="n">name</span><span class="o">;</span>
+		<span class="k">this</span><span class="o">.</span><span class="na">position</span> <span class="o">=</span> <span class="n">position</span><span class="o">;</span>
+		<span class="k">this</span><span class="o">.</span><span class="na">gender</span> <span class="o">=</span> <span class="n">gender</span><span class="o">;</span>
+	<span class="o">}</span>
+	
+	<span class="kd">public</span> <span class="kt">int</span> <span class="nf">getAge</span><span class="o">()</span> <span class="o">{</span>
+		<span class="k">return</span> <span class="n">age</span><span class="o">;</span>
+	<span class="o">}</span>
+	<span class="kd">public</span> <span class="kt">void</span> <span class="nf">setAge</span><span class="o">(</span><span class="kt">int</span> <span class="n">age</span><span class="o">)</span> <span class="o">{</span>
+		<span class="k">this</span><span class="o">.</span><span class="na">age</span> <span class="o">=</span> <span class="n">age</span><span class="o">;</span>
+	<span class="o">}</span>
+	<span class="kd">public</span> <span class="nc">String</span> <span class="nf">getName</span><span class="o">()</span> <span class="o">{</span>
+		<span class="k">return</span> <span class="n">name</span><span class="o">;</span>
+	<span class="o">}</span>
+	<span class="kd">public</span> <span class="kt">void</span> <span class="nf">setName</span><span class="o">(</span><span class="nc">String</span> <span class="n">name</span><span class="o">)</span> <span class="o">{</span>
+		<span class="k">this</span><span class="o">.</span><span class="na">name</span> <span class="o">=</span> <span class="n">name</span><span class="o">;</span>
+	<span class="o">}</span>
+	<span class="kd">public</span> <span class="nc">String</span> <span class="nf">getPosition</span><span class="o">()</span> <span class="o">{</span>
+		<span class="k">return</span> <span class="n">position</span><span class="o">;</span>
+	<span class="o">}</span>
+	<span class="kd">public</span> <span class="kt">void</span> <span class="nf">setPosition</span><span class="o">(</span><span class="nc">String</span> <span class="n">position</span><span class="o">)</span> <span class="o">{</span>
+		<span class="k">this</span><span class="o">.</span><span class="na">position</span> <span class="o">=</span> <span class="n">position</span><span class="o">;</span>
+	<span class="o">}</span>
+	<span class="kd">public</span> <span class="nc">Gender</span> <span class="nf">getGender</span><span class="o">()</span> <span class="o">{</span>
+		<span class="k">return</span> <span class="n">gender</span><span class="o">;</span>
+	<span class="o">}</span>
+	
+	<span class="kd">public</span> <span class="kt">void</span> <span class="nf">setGender</span><span class="o">(</span><span class="nc">Gender</span> <span class="n">gender</span><span class="o">)</span> <span class="o">{</span>
+		<span class="k">this</span><span class="o">.</span><span class="na">gender</span> <span class="o">=</span> <span class="n">gender</span><span class="o">;</span>
+	<span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p>Code for getting only female employees would be like</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="nc">List</span><span class="o">&lt;</span><span class="nc">Employee</span><span class="o">&gt;</span> <span class="nf">getOnlyFemaleEmployees</span><span class="o">(</span><span class="nc">List</span><span class="o">&lt;</span><span class="nc">Employee</span><span class="o">&gt;</span> <span class="n">employees</span><span class="o">)</span> <span class="o">{</span>
+	<span class="nc">List</span><span class="o">&lt;</span><span class="nc">Employee</span><span class="o">&gt;</span> <span class="n">femaleEmployees</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">ArrayList</span><span class="o">&lt;&gt;();</span>
+	<span class="k">for</span> <span class="o">(</span><span class="nc">Employee</span> <span class="n">employee</span> <span class="o">:</span> <span class="n">employees</span><span class="o">)</span> <span class="o">{</span>
+		<span class="k">if</span><span class="o">(</span><span class="nc">Gender</span><span class="o">.</span><span class="na">FEMALE</span><span class="o">.</span><span class="na">equals</span><span class="o">(</span><span class="n">employee</span><span class="o">.</span><span class="na">getGender</span><span class="o">()))</span> <span class="o">{</span>
+			<span class="n">femaleEmployees</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="n">employee</span><span class="o">);</span>
+		<span class="o">}</span>
+	<span class="o">}</span>
+	<span class="k">return</span> <span class="n">femaleEmployees</span><span class="o">;</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p><br /></p>
+
+<h4 id="second-attempt-parameterizing-the-gender">Second attempt: parameterizing the gender</h4>
+
+<p>Now HR changes her mind and asks for Male and Female employees separately.
+In the new code, gender is passed as parameter</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="nc">List</span><span class="o">&lt;</span><span class="nc">Employee</span><span class="o">&gt;</span> <span class="nf">filterEmployees</span><span class="o">(</span><span class="nc">List</span><span class="o">&lt;</span><span class="nc">Employee</span><span class="o">&gt;</span> <span class="n">employees</span><span class="o">,</span> <span class="nc">Gender</span> <span class="n">gender</span><span class="o">)</span> <span class="o">{</span>
+	<span class="nc">List</span><span class="o">&lt;</span><span class="nc">Employee</span><span class="o">&gt;</span> <span class="n">result</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">ArrayList</span><span class="o">&lt;&gt;();</span>
+	<span class="k">for</span> <span class="o">(</span><span class="nc">Employee</span> <span class="n">employee</span> <span class="o">:</span> <span class="n">employees</span><span class="o">)</span> <span class="o">{</span>
+		<span class="k">if</span><span class="o">(</span><span class="n">gender</span><span class="o">.</span><span class="na">equals</span><span class="o">(</span><span class="n">employee</span><span class="o">.</span><span class="na">getGender</span><span class="o">()))</span> <span class="o">{</span>
+			<span class="n">result</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="n">employee</span><span class="o">);</span>
+		<span class="o">}</span>
+	<span class="o">}</span>
+	<span class="k">return</span> <span class="n">result</span><span class="o">;</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p>Calling this method by</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">List</span><span class="o">&lt;</span><span class="nc">Employee</span><span class="o">&gt;</span> <span class="n">femaleEmployees</span> <span class="o">=</span> <span class="n">filterEmployees</span><span class="o">(</span><span class="n">employees</span><span class="o">,</span><span class="nc">Gender</span><span class="o">.</span><span class="na">FEMALE</span><span class="o">);</span>
+<span class="nc">List</span><span class="o">&lt;</span><span class="nc">Employee</span><span class="o">&gt;</span> <span class="n">maleEmployees</span> <span class="o">=</span> <span class="n">filterEmployees</span><span class="o">(</span><span class="n">employees</span><span class="o">,</span><span class="nc">Gender</span><span class="o">.</span><span class="na">FEMALE</span><span class="o">);</span>
+
+</code></pre></div></div>
+
+<p>Now HR wants all the employees who are aged above 40 years.
+In this is becoming irritating. Still the code is….</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="nc">List</span><span class="o">&lt;</span><span class="nc">Employee</span><span class="o">&gt;</span> <span class="nf">filterEmployees</span><span class="o">(</span><span class="nc">List</span><span class="o">&lt;</span><span class="nc">Employee</span><span class="o">&gt;</span> <span class="n">employees</span><span class="o">,</span> <span class="kt">int</span> <span class="n">age</span><span class="o">)</span> <span class="o">{</span>
+	<span class="nc">List</span><span class="o">&lt;</span><span class="nc">Employee</span><span class="o">&gt;</span> <span class="n">result</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">ArrayList</span><span class="o">&lt;&gt;();</span>
+	<span class="k">for</span> <span class="o">(</span><span class="nc">Employee</span> <span class="n">employee</span> <span class="o">:</span> <span class="n">employees</span><span class="o">)</span> <span class="o">{</span>
+		<span class="k">if</span><span class="o">(</span><span class="n">age</span> <span class="o">==</span> <span class="n">employee</span><span class="o">.</span><span class="na">getAge</span><span class="o">())</span> <span class="o">{</span>
+			<span class="n">result</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="n">employee</span><span class="o">);</span>
+		<span class="o">}</span>
+	<span class="o">}</span>
+	<span class="k">return</span> <span class="n">result</span><span class="o">;</span>
+<span class="o">}</span>
+</code></pre></div></div>
+<p><br /></p>
+
+<h4 id="third-attempt---filtering-with-every-attribute">Third attempt - filtering with every attribute</h4>
+
+<p>Now HR asks, all female employees or all the employees age greater than 40..
+This makes code ugly.. We are doing flag programming here.</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="nc">List</span><span class="o">&lt;</span><span class="nc">Employee</span><span class="o">&gt;</span> <span class="nf">filterEmployees</span><span class="o">(</span><span class="nc">List</span><span class="o">&lt;</span><span class="nc">Employee</span><span class="o">&gt;</span> <span class="n">employees</span><span class="o">,</span> <span class="nc">Gender</span> <span class="n">gender</span><span class="o">,</span> <span class="kt">int</span> <span class="n">age</span><span class="o">,</span> <span class="kt">boolean</span> <span class="n">flag</span><span class="o">)</span> <span class="o">{</span>
+	<span class="nc">List</span><span class="o">&lt;</span><span class="nc">Employee</span><span class="o">&gt;</span> <span class="n">result</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">ArrayList</span><span class="o">&lt;&gt;();</span>
+	<span class="k">for</span> <span class="o">(</span><span class="nc">Employee</span> <span class="n">employee</span> <span class="o">:</span> <span class="n">employees</span><span class="o">)</span> <span class="o">{</span>
+		<span class="k">if</span> <span class="o">((</span><span class="n">flag</span> <span class="o">&amp;&amp;</span> <span class="n">employee</span><span class="o">.</span><span class="na">getGender</span><span class="o">().</span><span class="na">equals</span><span class="o">(</span><span class="n">gender</span><span class="o">))</span> <span class="o">||</span> <span class="o">(!</span><span class="n">flag</span> <span class="o">&amp;&amp;</span> <span class="n">age</span> <span class="o">&gt;</span> <span class="n">employee</span><span class="o">.</span><span class="na">getAge</span><span class="o">()))</span> <span class="o">{</span>
+			<span class="n">result</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="n">employee</span><span class="o">);</span>
+		<span class="o">}</span>
+	<span class="o">}</span>
+	<span class="k">return</span> <span class="n">result</span><span class="o">;</span>
+<span class="o">}</span>
+</code></pre></div></div>
+<p><br /></p>
+
+<h3 id="behaviour-parameterization">Behaviour Parameterization</h3>
+
+<p>We need a better way to implement filtering of the employees. If we step back and see, all the filtering criteria is like a function which checks for some attribute of the Employee and employee is added to the result if the result is true. We can abstract it into an interface which has a method taking an Employee and returning a boolean. And concrete classes to implement this interface so that we can pass around that concrete class into filter method which uses that instance and checks for the filter criteria.</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">interface</span> <span class="nc">EmployeeChecker</span> <span class="o">{</span>
+	<span class="kt">boolean</span> <span class="nf">check</span><span class="o">(</span><span class="nc">Employee</span> <span class="n">employee</span><span class="o">);</span>
+<span class="o">}</span>
+
+<span class="kd">class</span> <span class="nc">EmployeeFemaleChecker</span> <span class="kd">implements</span> <span class="nc">EmployeeChecker</span><span class="o">{</span>
+
+	<span class="nd">@Override</span>
+	<span class="kd">public</span> <span class="kt">boolean</span> <span class="nf">check</span><span class="o">(</span><span class="nc">Employee</span> <span class="n">employee</span><span class="o">)</span> <span class="o">{</span>
+		<span class="k">return</span> <span class="nc">Gender</span><span class="o">.</span><span class="na">FEMALE</span><span class="o">.</span><span class="na">equals</span><span class="o">(</span><span class="n">employee</span><span class="o">);</span>
+	<span class="o">}</span>
+	
+<span class="o">}</span>
+
+<span class="kd">class</span> <span class="nc">EmployeeAgeChecker</span> <span class="kd">implements</span> <span class="nc">EmployeeChecker</span> <span class="o">{</span>
+
+	<span class="nd">@Override</span>
+	<span class="kd">public</span> <span class="kt">boolean</span> <span class="nf">check</span><span class="o">(</span><span class="nc">Employee</span> <span class="n">employee</span><span class="o">)</span> <span class="o">{</span>
+		<span class="k">return</span> <span class="n">employee</span><span class="o">.</span><span class="na">getAge</span><span class="o">()</span> <span class="o">&gt;</span> <span class="mi">40</span><span class="o">;</span>
+	<span class="o">}</span>
+	
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p><br /></p>
+
+<h4 id="fourth-attempt---filtering-by-abstract-criteria">Fourth attempt - filtering by abstract criteria</h4>
+
+<p>our modified filter with EmployeeChecker looks lik this</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="nc">List</span><span class="o">&lt;</span><span class="nc">Employee</span><span class="o">&gt;</span> <span class="nf">filterEmployees</span><span class="o">(</span><span class="nc">List</span><span class="o">&lt;</span><span class="nc">Employee</span><span class="o">&gt;</span> <span class="n">employees</span><span class="o">,</span> <span class="nc">EmployeeChecker</span> <span class="n">checker</span><span class="o">)</span> <span class="o">{</span>
+	<span class="nc">List</span><span class="o">&lt;</span><span class="nc">Employee</span><span class="o">&gt;</span> <span class="n">result</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">ArrayList</span><span class="o">&lt;&gt;();</span>
+	<span class="k">for</span> <span class="o">(</span><span class="nc">Employee</span> <span class="n">employee</span> <span class="o">:</span> <span class="n">employees</span><span class="o">)</span> <span class="o">{</span>
+		<span class="k">if</span> <span class="o">(</span><span class="n">checker</span><span class="o">.</span><span class="na">check</span><span class="o">(</span><span class="n">employee</span><span class="o">))</span> <span class="o">{</span>
+			<span class="n">result</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="n">employee</span><span class="o">);</span>
+		<span class="o">}</span>
+	<span class="o">}</span>
+	<span class="k">return</span> <span class="n">result</span><span class="o">;</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p>we can call this filter as below..</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">List</span><span class="o">&lt;</span><span class="nc">Employee</span><span class="o">&gt;</span> <span class="n">femaleEmployees</span> <span class="o">=</span> <span class="n">filterEmployees</span><span class="o">(</span><span class="n">employees</span><span class="o">,</span><span class="k">new</span> <span class="nc">EmployeeFemaleChecker</span><span class="o">());</span>
+<span class="nc">List</span><span class="o">&lt;</span><span class="nc">Employee</span><span class="o">&gt;</span> <span class="n">agedEmployees</span> <span class="o">=</span> <span class="n">filterEmployees</span><span class="o">(</span><span class="n">employees</span><span class="o">,</span><span class="k">new</span> <span class="nc">EmployeeAgeChecker</span><span class="o">());</span>
+</code></pre></div></div>
+
+<p>Now we have abstracted the behaviour in a way that you can write any filter condition just by implementing EmployeeChecker interface. For example you can write</p>
+
+<ul>
+  <li>EmployeeFemaleOrAgedAboveForty class</li>
+  <li>EmployeeMaleAndNameStartingWithLetterA class</li>
+</ul>
+
+<p>There is a pattern for what we did just now. It’s called <a href="http://en.wikipedia.org/wiki/Strategy_pattern">Strategy</a> pattern.
+<strong>THIS WHOLE STUFF IS PASSING THE BEHAVIOUR TO A METHOD</strong>
+Now we have to tackle the problem of verbocity. Just to filter the collection we have to write so many classes. There should be an easier way to deal with it. Let’s see :).</p>
+
+<p><br /></p>
+
+<h3 id="tackling-verbocity">Tackling Verbocity</h3>
+
+<p>The unnecessary overhead of creating too many classes somewhat is solved by <em>Anonymous Classes</em>.
+<br /></p>
+
+<h4 id="anonymous-classes">Anonymous Classes</h4>
+
+<p><em>Anonymous classes</em> are like the local classes (a class defined in a block) that you’re already familiar with in Java. But anonymous classes don’t have a name. They allow you to declare and instantiate a class at the same time. In short, they allow you to create ad hoc implementations.</p>
+
+<p><br /></p>
+
+<h4 id="fifth-attempt---using-an-anonymous-class">Fifth attempt - using an anonymous class</h4>
+
+<p>Following code shows how to implement EmployeeChecker as anonymous class and use it for filtering</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">List</span><span class="o">&lt;</span><span class="nc">Employee</span><span class="o">&gt;</span> <span class="n">femaleEmployees</span> <span class="o">=</span> <span class="n">filterEmployees</span><span class="o">(</span><span class="n">employees</span><span class="o">,</span> <span class="k">new</span> <span class="nc">EmployeeChecker</span><span class="o">()</span> <span class="o">{</span>
+	<span class="nd">@Override</span>
+	<span class="kd">public</span> <span class="kt">boolean</span> <span class="nf">check</span><span class="o">(</span><span class="nc">Employee</span> <span class="n">employee</span><span class="o">)</span> <span class="o">{</span>
+		<span class="k">return</span> <span class="nc">Gender</span><span class="o">.</span><span class="na">FEMALE</span><span class="o">.</span><span class="na">equals</span><span class="o">(</span><span class="n">employee</span><span class="o">.</span><span class="na">getGender</span><span class="o">());</span>
+	<span class="o">}</span>
+<span class="o">});</span>
+
+<span class="nc">List</span><span class="o">&lt;</span><span class="nc">Employee</span><span class="o">&gt;</span> <span class="n">femaleAgedEmployees</span> <span class="o">=</span> <span class="n">filterEmployees</span><span class="o">(</span><span class="n">employees</span><span class="o">,</span> <span class="k">new</span> <span class="nc">EmployeeChecker</span><span class="o">()</span> <span class="o">{</span>
+	<span class="nd">@Override</span>
+	<span class="kd">public</span> <span class="kt">boolean</span> <span class="nf">check</span><span class="o">(</span><span class="nc">Employee</span> <span class="n">employee</span><span class="o">)</span> <span class="o">{</span>
+		<span class="k">return</span> <span class="n">employee</span><span class="o">.</span><span class="na">getGender</span><span class="o">().</span><span class="na">equals</span><span class="o">(</span><span class="nc">Gender</span><span class="o">.</span><span class="na">FEMALE</span><span class="o">)</span> <span class="o">&amp;&amp;</span> <span class="n">employee</span><span class="o">.</span><span class="na">getAge</span><span class="o">()</span> <span class="o">&gt;</span> <span class="mi">40</span><span class="o">;</span>
+	<span class="o">}</span>
+<span class="o">});</span>
+</code></pre></div></div>
+
+<p><br /></p>
+
+<h4 id="sixth-attempt---using-lambda-expressions">Sixth attempt - using lambda expressions</h4>
+
+<p>Using lambda expressions</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">List</span><span class="o">&lt;</span><span class="nc">Employee</span><span class="o">&gt;</span> <span class="n">maleEmployees</span> <span class="o">=</span> <span class="n">filterEmployees</span><span class="o">(</span><span class="n">employees</span><span class="o">,</span>
+	<span class="o">(</span><span class="nc">Employee</span> <span class="n">employee</span><span class="o">)</span> <span class="o">-&gt;</span> <span class="n">employee</span><span class="o">.</span><span class="na">getGender</span><span class="o">().</span><span class="na">equals</span><span class="o">(</span><span class="nc">Gender</span><span class="o">.</span><span class="na">MALE</span><span class="o">));</span>
+<span class="nc">List</span><span class="o">&lt;</span><span class="nc">Employee</span><span class="o">&gt;</span> <span class="n">femaleEmployeesBelow30</span> <span class="o">=</span> <span class="n">filterEmployees</span><span class="o">(</span><span class="n">employees</span><span class="o">,</span>
+	<span class="o">(</span><span class="nc">Employee</span> <span class="n">employee</span><span class="o">)</span> <span class="o">-&gt;</span> <span class="n">employee</span><span class="o">.</span><span class="na">getGender</span><span class="o">().</span><span class="na">equals</span><span class="o">(</span><span class="nc">Gender</span><span class="o">.</span><span class="na">FEMALE</span><span class="o">)</span> <span class="o">&amp;&amp;</span> <span class="n">employee</span><span class="o">.</span><span class="na">age</span> <span class="o">&lt;</span> <span class="mi">30</span><span class="o">);</span>
+</code></pre></div></div>
+<p><br /></p>
+
+<h4 id="seventh-attempt---abstracting-over-list-type">Seventh attempt - abstracting over <strong>List</strong> type</h4>
+
+<p>Now imagine you want to generalize this whole thing. You can use Generics along with the interface.</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">interface</span> <span class="nc">Predicate</span><span class="o">&lt;</span><span class="no">T</span><span class="o">&gt;</span> <span class="o">{</span>
+	<span class="kt">boolean</span> <span class="nf">test</span><span class="o">(</span><span class="no">T</span> <span class="n">t</span><span class="o">);</span>
+<span class="o">}</span>
+
+<span class="kd">public</span> <span class="kd">static</span> <span class="o">&lt;</span><span class="no">T</span><span class="o">&gt;</span> <span class="nc">List</span><span class="o">&lt;</span><span class="no">T</span><span class="o">&gt;</span> <span class="nf">filter</span><span class="o">(</span><span class="nc">List</span><span class="o">&lt;</span><span class="no">T</span><span class="o">&gt;</span> <span class="n">list</span><span class="o">,</span> <span class="nc">Predicate</span><span class="o">&lt;</span><span class="no">T</span><span class="o">&gt;</span> <span class="n">p</span><span class="o">)</span> <span class="o">{</span>
+	<span class="nc">List</span><span class="o">&lt;</span><span class="no">T</span><span class="o">&gt;</span> <span class="n">result</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">ArrayList</span><span class="o">&lt;&gt;();</span>
+	<span class="k">for</span><span class="o">(</span><span class="no">T</span> <span class="nl">e:</span> <span class="n">list</span><span class="o">)</span> <span class="o">{</span>
+		<span class="k">if</span><span class="o">(</span><span class="n">p</span><span class="o">.</span><span class="na">test</span><span class="o">(</span><span class="n">e</span><span class="o">))</span> <span class="o">{</span>
+			<span class="n">result</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="n">e</span><span class="o">);</span>
+		<span class="o">}</span>
+	<span class="o">}</span>
+	<span class="k">return</span> <span class="n">result</span><span class="o">;</span>
+<span class="o">}</span> 
+</code></pre></div></div>
+
+<p>Now this can filter anything. like Integers, Apples, Employees etc,.</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">List</span><span class="o">&lt;</span><span class="nc">Employee</span><span class="o">&gt;</span> <span class="n">someEmployees</span> <span class="o">=</span> <span class="n">filter</span><span class="o">(</span><span class="n">employees</span><span class="o">,</span> <span class="o">(</span><span class="nc">Employee</span> <span class="n">e</span><span class="o">)</span> <span class="o">-&gt;</span> <span class="n">e</span><span class="o">.</span><span class="na">getAge</span><span class="o">()</span> <span class="o">&gt;</span> <span class="mi">40</span><span class="o">);</span>
+<span class="nc">List</span><span class="o">&lt;</span><span class="nc">Integer</span><span class="o">&gt;</span> <span class="n">someIntegers</span> <span class="o">=</span> <span class="n">filter</span><span class="o">(</span><span class="nc">Arrays</span><span class="o">.</span><span class="na">asList</span><span class="o">(</span><span class="k">new</span> <span class="nc">Integer</span><span class="o">(</span><span class="mi">1</span><span class="o">),</span> <span class="k">new</span> <span class="nc">Integer</span><span class="o">(</span><span class="mi">2</span><span class="o">),</span> <span class="k">new</span> <span class="nc">Integer</span><span class="o">(</span><span class="mi">3</span><span class="o">)),</span>
+	<span class="o">(</span><span class="nc">Integer</span> <span class="n">i</span><span class="o">)</span> <span class="o">-&gt;</span> <span class="n">i</span><span class="o">.</span><span class="na">intValue</span><span class="o">()</span> <span class="o">&gt;</span> <span class="mi">2</span><span class="o">);</span>
+</code></pre></div></div>
+
+<p><br /></p>
+
+<h3 id="summary">Summary</h3>
+
+<blockquote>
+  <p>Behavior parameterization is the ability for a method to take multiple different behaviors as parameters and use them internally to accomplish different behaviors.</p>
+</blockquote>
+
+<blockquote>
+  <p>Behavior parameterization lets you make your code more adaptive to changing requirements and saves on engineering efforts in the future.</p>
+</blockquote>
+
+<blockquote>
+  <p>Passing code is a way to give new behaviors as arguments to a method. But it’s verbose prior to Java 8. Anonymous classes helped a bit before Java 8 to get rid of the verbosity associated with declaring multiple concrete classes for an interface that are needed only once.</p>
+</blockquote>
+
+<blockquote>
+  <p>The Java API contains many methods that can be parameterized with different behaviors, which include sorting, threads, and GUI handling.</p>
+</blockquote>
+
+<p><br />
+<br /></p>
+
+<h2 id="lambda-expressions">Lambda Expressions</h2>
+
+<p>After realizing that <em>Anonymous Classes</em> are too verbose for throwing around behavioural code. Because of the verbocity, developers do not like to use it. We know that <strong>Lamda Expressions</strong> are provided for this very reason, let’s learn them in step-by-step manner as usual.</p>
+
+<p><br /></p>
+
+<h3 id="lambdas-in-a-nutshell">Lambdas in a Nutshell</h3>
+
+<p>A <em>Lambda Expression</em> can be understood as a consise representation of Anonymous function that can be passed around. No name, has parameters, body and return type. Exceptions too can be thrown.</p>
+<ul>
+  <li><em>Anonymous</em> - No name, less to code :).</li>
+  <li><em>Function</em> - Because it’s not associated with any class and has parameters, body and return type and alos exceptions.</li>
+  <li><em>Passed Around</em> - Can be passed around into a method or stored in a variable.</li>
+  <li><em>Consise</em> - No need of too much boilerplate code like Anonymous classes.</li>
+</ul>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">Lambda Parameters</th>
+      <th style="text-align: center">Arrow</th>
+      <th style="text-align: center">Lambda Body</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">(Employee e1, Employee e2)</td>
+      <td style="text-align: center">-&gt;</td>
+      <td style="text-align: center">e1.getSalary().compareTo(e2.getSalary());</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Following are valid lambda expressions</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">(</span><span class="nc">String</span> <span class="n">a</span><span class="o">)</span> <span class="o">-&gt;</span> <span class="n">a</span><span class="o">.</span><span class="na">length</span><span class="o">();</span>
+
+<span class="o">(</span><span class="nc">Employee</span> <span class="n">e</span><span class="o">)</span> <span class="o">-&gt;</span> <span class="n">e</span><span class="o">.</span><span class="na">getSalary</span><span class="o">()</span> <span class="o">&gt;</span> <span class="mi">5000</span><span class="o">;</span>
+
+<span class="o">(</span><span class="kt">int</span> <span class="n">x</span><span class="o">,</span> <span class="kt">int</span> <span class="n">y</span><span class="o">)</span> <span class="o">-&gt;</span> <span class="o">{</span>
+	<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Value of x is "</span><span class="o">+</span><span class="n">x</span><span class="o">);</span>
+	<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Value of y is "</span><span class="o">+</span><span class="n">y</span><span class="o">);</span>
+	<span class="k">return</span> <span class="n">x</span><span class="o">+</span><span class="n">y</span><span class="o">;</span>
+<span class="o">}</span>
+
+<span class="o">()</span> <span class="o">-&gt;</span> <span class="mi">42</span><span class="o">;</span>
+
+<span class="n">e1</span><span class="o">.</span><span class="na">getSalary</span><span class="o">().</span><span class="na">compareTo</span><span class="o">(</span><span class="n">e2</span><span class="o">.</span><span class="na">getSalary</span><span class="o">());</span>
+</code></pre></div></div>
+
+<p><strong>Examples of lambdas with their use cases</strong></p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">Use case</th>
+      <th>Examples</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">A boolean expression</td>
+      <td>(Employee e) -&gt; e.isExecutive();</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">Creating Objects</td>
+      <td>() -&gt; new Employee(31, “Ramesh”, “Manager”);</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">Consuming an Object</td>
+      <td>(Employee e) -&gt; {     System.out.println(e.getName());  }</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">Select or Extract from an object</td>
+      <td>(String s) -&gt; s.length();</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">Combine two values</td>
+      <td>(int a, int b) -&gt; a*b;</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">Compare two objects</td>
+      <td>(Employee e1, Employee e2) -&gt; e1.getSalary().compareTo(e2.getSalary());</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><br /></p>
+
+<h3 id="where-and-how-to-use-lambdas">Where and How to use Lambdas</h3>
+
+<p><em>You can use Lambdas in the place where a <strong>Functional Interface</strong> is expected.</em></p>
+
+<p><br /></p>
+
+<h4 id="functional-interface">Functional Interface</h4>
+
+<p>In a nutshell, a *functional interface* is an interface that specifies exactly one abstract method. You already know several other functional interfaces in the Java API such as Comparator and Runnable,. </p>
+
+<p><strong>Functional Interfaces already existed</strong></p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">interface</span> <span class="nc">Comparator</span><span class="o">&lt;</span><span class="no">T</span><span class="o">&gt;</span> <span class="o">{</span>
+	<span class="kt">int</span> <span class="nf">compare</span><span class="o">(</span><span class="no">T</span> <span class="n">o1</span><span class="o">,</span> <span class="no">T</span> <span class="n">o2</span><span class="o">);</span>
+<span class="o">}</span>
+
+<span class="kd">public</span> <span class="kd">interface</span> <span class="nc">Runnable</span> <span class="o">{</span>
+	<span class="kt">void</span> <span class="nf">run</span><span class="o">();</span>
+<span class="o">}</span>
+
+<span class="kd">public</span> <span class="kd">interface</span> <span class="nc">ActionListener</span> <span class="kd">extends</span> <span class="nc">EventListener</span> <span class="o">{</span>
+	<span class="kt">void</span> <span class="nf">actionPerformed</span><span class="o">(</span><span class="nc">ActionEvent</span> <span class="n">e</span><span class="o">);</span>
+<span class="o">}</span>
+
+<span class="kd">public</span> <span class="kd">interface</span> <span class="nc">Callable</span><span class="o">&lt;</span><span class="no">V</span><span class="o">&gt;</span> <span class="o">{</span>
+	<span class="no">V</span> <span class="nf">call</span><span class="o">()</span> <span class="kd">throws</span> <span class="nc">Exception</span><span class="o">;</span>
+<span class="o">}</span>
+
+<span class="kd">public</span> <span class="kd">interface</span> <span class="nc">PrivilegedAction</span><span class="o">&lt;</span><span class="no">T</span><span class="o">&gt;</span> <span class="o">{</span>
+	<span class="no">T</span> <span class="nf">run</span><span class="o">();</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p>What can you do with functional interfaces? Lambda expressions let you provide the implementation of the abstract method of a functional interface directly inline and treat the whole expression as an instance of a functional interface (more technically speaking, an instance of a concrete implementation of the functional interface). You can achieve the same thing with an anonymous inner class, although it’s clumsier: you provide an implementation and instantiate it directly inline.</p>
+
+<h4 id="function-descriptor">Function Descriptor</h4>
+<p>Apart from the ones which have single abstract methods, a new way of annotating with @FunctionalInterface is introduced. It helps during compilation, documentation and error messages. That’s it.</p>
+
+<h3 id="putting-lambdas-into-practice-the-execute-around-pattern">Putting lambdas into practice: the execute-around pattern</h3>
+
+</div>
+            <div style="clear:both;">
+              <p class="text-center">
+                <br />
+                <a target="_blank" href="/_docs/java/modernjava.md" class="btn btn-default" role="button">
+                  <i class="fa fa-pencil fa-lg"></i> Improve this page
+                </a>
+              </p>
+            </div>
+            <hr>
+            
+
+
+
+
+
+  
+  
+    <ul class="pager">
+      
+        <li class="previous disabled">
+          <a>
+            <span aria-hidden="true">&larr;</span> Previous
+          </a>
+        </li>
+      
+
+      
+        
+        
+        <li class="next">
+          <a href="/docs/home/">
+            Next <span aria-hidden="true">&rarr;</span>
+          </a>
+        </li>
+      
+      </ul>
+    <div class="clear"></div>
+    
+
+        </div>
+
+    </div>
+</div>
+
+        </div>
+    </div>
+
+    <footer class="footer">
+    <div class="container">
+
+        <p class="text-center">
+            Anisike 2020 |
+            Powered by <a href="https://github.com/aksakalli/jekyll-doc-theme">Jekyll Doc Theme</a>
+        </p>
+        <!-- <p class="text-muted">Place sticky footer content here.</p> -->
+    </div>
+</footer>
+
+    <script>
+  var baseurl = ''
+</script>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+<script src="/assets/js/bootstrap.min.js "></script>
+<script src="/assets/js/typeahead.bundle.min.js "></script>
+
+<script src="/assets/js/main.js "></script>
+
+</body>
+
+</html>
