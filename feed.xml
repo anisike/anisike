@@ -1,5 +1,69 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-US"><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="en-US" /><updated>2020-05-03T10:42:27+02:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Anisike</title><subtitle>A website primarily intended for writing personal notes on the technologies I learn everyday.
-</subtitle><entry><title type="html">Recap of String class</title><link href="http://localhost:4000/blog/2020/05/02/Recap_String_StringBuffer/" rel="alternate" type="text/html" title="Recap of String class" /><published>2020-05-02T00:00:00+02:00</published><updated>2020-05-02T00:00:00+02:00</updated><id>http://localhost:4000/blog/2020/05/02/Recap_String_StringBuffer</id><content type="html" xml:base="http://localhost:4000/blog/2020/05/02/Recap_String_StringBuffer/">&lt;hr /&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-US"><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="en-US" /><updated>2020-05-03T17:01:10+02:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Anisike</title><subtitle>A website primarily intended for writing personal notes on the technologies I learn everyday.
+</subtitle><entry><title type="html">HRF Notes</title><link href="http://localhost:4000/blog/2020/05/03/HrfNotes/" rel="alternate" type="text/html" title="HRF Notes" /><published>2020-05-03T00:00:00+02:00</published><updated>2020-05-03T00:00:00+02:00</updated><id>http://localhost:4000/blog/2020/05/03/HrfNotes</id><content type="html" xml:base="http://localhost:4000/blog/2020/05/03/HrfNotes/">&lt;hr /&gt;
+&lt;ul id=&quot;markdown-toc&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#hrf-documentation&quot; id=&quot;markdown-toc-hrf-documentation&quot;&gt;HRF Documentation&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#hrf-blogs&quot; id=&quot;markdown-toc-hrf-blogs&quot;&gt;HRF Blogs&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#hrf-notes&quot; id=&quot;markdown-toc-hrf-notes&quot;&gt;HRF Notes&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#hrf-test-system-details&quot; id=&quot;markdown-toc-hrf-test-system-details&quot;&gt;HRF Test system details&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#hrf-incident-faq&quot; id=&quot;markdown-toc-hrf-incident-faq&quot;&gt;HRF Incident FAQ&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;hrf-documentation&quot;&gt;HRF Documentation&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://help.sap.com/viewer/d9116bf1587f447da2530364e8816844/1.11XSC/en-US/&quot;&gt;Development and Implementation Guide&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://help.sap.com/viewer/259ff7e120b048ff93810a84b60d78bd/1.11XSC/en-US/211ef087eed3426194dd24ad74f84dce.html&quot;&gt;Security Guide&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://help.sap.com/viewer/67d736abfa7d4b6db23167c4926ceac7/1.11XSC/en-US/e12d332efe724577879f89c09c5c0112.html&quot;&gt;Installation and Upgrade Guide&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://help.sap.com/viewer/f62ac60f6b404d6fb008a6cfd9b7430c/1.12/en-US&quot;&gt;Rule Expression Language Guide&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://help.sap.com/viewer/product/SAP_HANA_RULES_FRAMEWORK/1.12/en-US&quot;&gt;Hana 1.12 Guides&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;hrf-blogs&quot;&gt;HRF Blogs&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://blogs.sap.com/2015/11/16/sap-hana-rules-framework-by-the-sap-hana-academy/&quot;&gt;SAP HANA Rules Framework by the SAP HANA Academy&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://blogs.sap.com/2016/12/19/hana-rules-framework-hrf-blog-of-blogs/&quot;&gt;HANA Rules Framework (HRF) blog of blogs&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;hrf-notes&quot;&gt;HRF Notes&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://launchpad.support.sap.com/#/notes/2455694&quot;&gt;2455694 - SAP HANA Rules Framework 1.0 SPS 11 Release Note&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;hrf-test-system-details&quot;&gt;HRF Test system details&lt;/h3&gt;
+
+&lt;h3 id=&quot;hrf-incident-faq&quot;&gt;HRF Incident FAQ&lt;/h3&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;How to check the HRF version in Hana DB?
+    &lt;div class=&quot;language-sql highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;select&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;M_XS_APPLICATIONS&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;where&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;DELIVERY_UNIT&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'HCO_RULE_FW'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+    &lt;p&gt;OR&lt;/p&gt;
+
+    &lt;div class=&quot;language-sql highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;select&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;_sys_repo&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;delivery_units&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;where&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;delivery_unit&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'HCO_RULE_FW'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;How to check whether DU is Active or not? (Result should be empty)
+    &lt;div class=&quot;language-sql highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;select&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;distinct&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;t1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;package_id&lt;/span&gt; 
+&lt;span class=&quot;k&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;_sys_repo&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;package_catalog&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;t1&lt;/span&gt; 
+&lt;span class=&quot;k&quot;&gt;inner&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;join&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;_sys_repo&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;inactive_object&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;t2&lt;/span&gt; 
+&lt;span class=&quot;k&quot;&gt;on&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;t1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;package_id&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;t2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;package_id&lt;/span&gt; 
+&lt;span class=&quot;k&quot;&gt;where&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;t1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;delivery_unit&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'HCO_RULE_FW'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;How to check HRF Plugin is enabled or not? (result should be true)
+    &lt;div class=&quot;language-sql highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;select&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;value&lt;/span&gt; 
+&lt;span class=&quot;k&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sys&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;m_inifile_contents&lt;/span&gt; 
+&lt;span class=&quot;k&quot;&gt;where&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;file_name&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'indexserver.ini'&lt;/span&gt; 
+&lt;span class=&quot;k&quot;&gt;and&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;section&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'repository'&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;and&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;key&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'jsplugin_sap/hrf/resources/common/runtimeplugin/src/hrfresourceactivation.xsjs'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;How to do WTS with NLA?
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;https://wiki.wdf.sap.corp/wiki/display/hanacockpit/Connect+to+customer%27s+windows+system+with+WTS+to+resolve+BCP+issue&quot;&gt;Follow this wiki&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;</content><author><name>Prashantha HJ</name></author><summary type="html"></summary></entry><entry><title type="html">Recap of String class</title><link href="http://localhost:4000/blog/2020/05/02/Recap_String_StringBuffer/" rel="alternate" type="text/html" title="Recap of String class" /><published>2020-05-02T00:00:00+02:00</published><updated>2020-05-02T00:00:00+02:00</updated><id>http://localhost:4000/blog/2020/05/02/Recap_String_StringBuffer</id><content type="html" xml:base="http://localhost:4000/blog/2020/05/02/Recap_String_StringBuffer/">&lt;hr /&gt;
 &lt;ul id=&quot;markdown-toc&quot;&gt;
   &lt;li&gt;&lt;a href=&quot;#creating-of-strings&quot; id=&quot;markdown-toc-creating-of-strings&quot;&gt;Creating of Strings&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;#concatenation-of-string&quot; id=&quot;markdown-toc-concatenation-of-string&quot;&gt;Concatenation of String&lt;/a&gt;&lt;/li&gt;
