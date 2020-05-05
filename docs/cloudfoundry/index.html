@@ -22,9 +22,9 @@
 <meta property="og:url" content="http://localhost:4000/docs/cloudfoundry/" />
 <meta property="og:site_name" content="Anisike" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2020-05-03T17:01:10+02:00" />
+<meta property="article:published_time" content="2020-05-05T08:08:24+02:00" />
 <script type="application/ld+json">
-{"@type":"WebPage","url":"http://localhost:4000/docs/cloudfoundry/","author":{"@type":"Person","name":"Prashantha HJ"},"headline":"Cloud Foundry","dateModified":"2020-05-03T17:01:10+02:00","description":"A website primarily intended for writing personal notes on the technologies I learn everyday.","datePublished":"2020-05-03T17:01:10+02:00","@context":"http://schema.org"}</script>
+{"@type":"WebPage","url":"http://localhost:4000/docs/cloudfoundry/","author":{"@type":"Person","name":"Prashantha HJ"},"headline":"Cloud Foundry","dateModified":"2020-05-05T08:08:24+02:00","description":"A website primarily intended for writing personal notes on the technologies I learn everyday.","datePublished":"2020-05-05T08:08:24+02:00","@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -167,9 +167,20 @@
     </ol>
   </li>
   <li><a href="#cloud-foundry-cli-and-apps-manager" id="markdown-toc-cloud-foundry-cli-and-apps-manager">Cloud Foundry CLI and Apps Manager</a></li>
-  <li><a href="#users-orgs-spaces-and-roles" id="markdown-toc-users-orgs-spaces-and-roles">Users, Orgs, Spaces, and Roles</a></li>
-  <li><a href="#architecting-and-building-apps-for-the-cloud" id="markdown-toc-architecting-and-building-apps-for-the-cloud">Architecting and Building Apps for the Cloud</a></li>
-  <li><a href="#deploying-apps-to-cloud-foundry" id="markdown-toc-deploying-apps-to-cloud-foundry">Deploying Apps to Cloud Foundry</a></li>
+  <li><a href="#working-with-pcf" id="markdown-toc-working-with-pcf">Working with PCF</a>    <ol>
+      <li><a href="#installing-pcfdev" id="markdown-toc-installing-pcfdev">Installing pcfdev</a></li>
+    </ol>
+  </li>
+  <li><a href="#users-orgs-spaces-and-roles" id="markdown-toc-users-orgs-spaces-and-roles">Users, Orgs, Spaces, and Roles</a>    <ol>
+      <li><a href="#cf-commands-for-managing-orgs-and-spaces" id="markdown-toc-cf-commands-for-managing-orgs-and-spaces">CF Commands for Managing Orgs and Spaces</a></li>
+    </ol>
+  </li>
+  <li><a href="#applications" id="markdown-toc-applications">Applications</a>    <ol>
+      <li><a href="#apps-routes-domains-and-buildpacks" id="markdown-toc-apps-routes-domains-and-buildpacks">Apps, Routes, Domains, and Buildpacks</a></li>
+      <li><a href="#application-management" id="markdown-toc-application-management">Application Management</a></li>
+    </ol>
+  </li>
+  <li><a href="#services" id="markdown-toc-services">Services</a></li>
   <li><a href="#microservices-and-worker-applications" id="markdown-toc-microservices-and-worker-applications">Microservices and Worker Applications</a></li>
   <li><a href="#services-and-service-brokers" id="markdown-toc-services-and-service-brokers">Services and Service Brokers</a></li>
   <li><a href="#buildpacks" id="markdown-toc-buildpacks">Buildpacks</a></li>
@@ -260,15 +271,220 @@
 
 <p><br /></p>
 
+<h3 id="working-with-pcf">Working with PCF</h3>
+
+<p><br /></p>
+
+<h4 id="installing-pcfdev">Installing pcfdev</h4>
+<p><a href="/assets/img/docs/cloudfoundry/orgs_and_spaces.jpg">Install PCF Dev</a></p>
+
+<p><br /></p>
+
 <h3 id="users-orgs-spaces-and-roles">Users, Orgs, Spaces, and Roles</h3>
 
+<p>In cloud foundry, <strong>Organizations or Orgs</strong> are representation of a Group, A Business Unit or A Department. Each Org has a resource quota for memory, app instaces etc,. 
+Orgs have many spaces. These spaces are contain Applications and Services. There are roles to manage these Orgs and Spaces. The users in these rules manage Orgs and Spaces 
+with resource allocation.</p>
+
+<p>A <strong>Space</strong> is where the applications are pushed to. All service bindings are created and managed within a space. Spaces can be mapped to a specific environment, such as development, testing, integration, or production. Spaces can also be mapped to a sub-team under the Business Unit, Application, or Product Group. Services used by applications are scoped by Spaces. Developers push their applications into Space and then continue to develop and maintain their applications in the same space.If a given Space requires a different resource quota than the one defined at the Org, then the Cloud Foundry administrator or the Org Manager of that Org can create a custom resource quota and assign it to Space.</p>
+
+<p><img src="/assets/img/docs/cloudfoundry/orgs_and_spaces.jpg" alt="Alt Orgs AndS paces" /></p>
+
+<p>A <strong>user account</strong> allows a user to log in to Cloud Foundry and perform certain operations that are limited by the roles assigned to them by the Cloud Foundry Administrator.The user accounts can be created at an Org or Space level, based on the role they play in the organization. The same user can administer the Org and Space, or can be restricted to pushing applications to a given Space or Spaces.Additionally, a user can span across multiple spaces in an Org, and under each Space, they can be controlled by the Space role.</p>
+
+<p>There is a big list of Roles a user can have. <a href="https://docs.cloudfoundry.org/concepts/roles.html">Read here</a></p>
+
+<h4 id="cf-commands-for-managing-orgs-and-spaces">CF Commands for Managing Orgs and Spaces</h4>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># Check current organisation and space
+cf target
+
+# List all orgs we have access to 
+cf orgs
+
+# List all spaces in the current org
+cf spaces
+
+# Change current organisation or/and space
+cf target -o [org-name] -s [space-name]
+
+# Check the available quotas - i.e. plans
+cf quotas
+
+# Check the quota for a given org
+cf org [org-name]
+
+# Check the quota for a given space
+# in the current organisation
+cf space [space-name]
+
+# Create space in the current organisation
+cf create-space development
+
+# Create an Org
+cf create-org orgname
+
+# Create a user
+cf create-user USERNAME PASSWORD
+
+# Assign a org role to a user
+cf set-org-role USERNAME ORG ROLE
+
+# Assign a space role to a user
+cf set-space-role USERNAME ORG SPACE ROLE
+</code></pre></div></div>
+
 <p><br /></p>
 
-<h3 id="architecting-and-building-apps-for-the-cloud">Architecting and Building Apps for the Cloud</h3>
+<h3 id="applications">Applications</h3>
 
 <p><br /></p>
 
-<h3 id="deploying-apps-to-cloud-foundry">Deploying Apps to Cloud Foundry</h3>
+<h4 id="apps-routes-domains-and-buildpacks">Apps, Routes, Domains, and Buildpacks</h4>
+
+<p>In Cloud Foundry, an Applicaiton is an abstraction of one or several identical servers called instances which run the same code.
+These instances follow a template called buildpack. A buildpack provides framework and runtime support -e.g. a preconfigured Java Web server.
+A buildpack defines the server configuration and setup and we just need to push code which can be run in such an environment.</p>
+
+<p>Cloud Foundry comes with a number of system-buildpacks for commonly used frameworks like Node.js, Rails, Java, .Net etc,. There are many community buildpacks too.</p>
+
+<p>When creating a new application, we can explicitly specify its buildpack. If no buildpack is provided, Cloud Foundry will try to guess which one to use, which can lead 
+to an error if there are multiple matching buildpacks.</p>
+
+<p>As stated, Application can have multiple servers/instances. So how do we make them appear as a single instance to the developer and the end user? In a typical IaaS environment, we would add a load balancer “in front of them” to route all the traffic across the instances. The CF approach to this is to use the so called <strong>Route</strong>, which is an address 
+associated with an Application. Routing is how incoming traffic is distributed across application instances. Under the hood, Cloud Foundry takes care of the details -e.g. load balancing, web-sockets, sticky sessions, and caching.</p>
+
+<p>Every organization has one or several domains. Each route’s address within an organization should fall within one of these domains. For example, if a route has address
+myapp.route.com, then there must be a domain route.com in its organization.</p>
+
+<p>Applications which are not accessed online (e.g. background batch processing jobs) do not need routes.</p>
+
+<p>Here’s how we can work with apps, buildpacks, and routes:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># List all apps in the space
+cf apps
+
+# Details for a specific app
+cf app [app-name]
+
+# List all predefined buildpacks
+cf builpacks
+
+# List all domains in the organisation
+cf domains
+
+# Creates the "route.com" domain and all 
+# of its routes in the current org
+cf create-domain [org-name] route.com
+
+# Remove the "route.com" domain
+cf delete-domain route.com
+
+# List all routes in the space
+cf routes
+
+# Create a new route: "myapp.route.com"
+cf create-route [space-name] route.com --hostname myapp
+
+# Map "myapp.route.com" to an app. 
+# Creates the route if not present
+cf map-route [app-name] route.com -n myapp
+
+# Unmap "myapp.route.com" from an app. 
+# Creates the route if not present
+cf unmap-route [app-name] route.com -n myapp
+</code></pre></div></div>
+
+<p><br /></p>
+
+<h4 id="application-management">Application Management</h4>
+
+<p>To deploy a new app or update an existing one we need to <strong>push</strong> its code to the Cloud Foundry instance. The <em>push</em> command has many optional arguments which depend on
+the type. However, it’s better to specify all these arguments in a system file called <em>manifest.yml</em> which is a special file for Cloud Foundry.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># Start a new app called "myapp"
+# If there's a manifest.yml in the current folder, 
+# the config will be read from there
+cf push
+</code></pre></div></div>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nn">---</span>
+<span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">myNodejsapp</span>
+  <span class="na">memory</span><span class="pi">:</span> <span class="s">256M</span>
+  <span class="na">disk_quota</span><span class="pi">:</span> <span class="s">512M</span>
+  <span class="na">buildpack</span><span class="pi">:</span> <span class="s">nodejs_buildpack</span>
+  <span class="na">host</span><span class="pi">:</span> <span class="s">my-new-nodejsapp</span>
+  <span class="na">domain</span><span class="pi">:</span> <span class="s">mybluemix.net</span>
+  <span class="na">command</span><span class="pi">:</span> <span class="s">node app.js</span>
+</code></pre></div></div>
+
+<p>In this example we specify the resource requirements, buildpack, route (host:domain), and a starting command.</p>
+
+<p>After an application is started, we can easily manage its state and resources.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># Start, stop, restart app
+cf start [app-name]
+cf stop [app-name]
+cf restart [app-name]
+
+# Delete the app and its routes
+cf delete [app-name] -r
+
+# Manually scale the app
+cf scale [app-name] -i [num-instances] -m [memory-size]
+</code></pre></div></div>
+
+<p>When things go wrong, we will need to check the app’s log and configuration.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># List all environment variables of the app
+cf env [app-name]
+
+# Tail in real time the app's log
+cf logs [app-name]
+
+# Check the latest app log
+cf logs --recent [app-name]
+
+# Check the latest events - e.g. restarting, deployment
+cf events [app-name]
+</code></pre></div></div>
+
+<p><br /></p>
+
+<h3 id="services">Services</h3>
+
+<p>Cloud Foundry applications host business logic specific to our problem domain - e.g. web user interface or APIs. Almost every other architectural component is classified as <strong>service</strong>. In Cloud Foundry, services can be <strong>attached</strong> to an application so that it can use them.</p>
+
+<p>For example, data bases, data analytics APIs, pub-sub systems, and even autoscaling can be implemented as services. Whenever the application logic needs to know about a sevice instance (e.g. to connect to a database), this information is provided via the <strong>VCAP_SERVICES</strong> environment variable, which is a JSON string. The application is responsible 
+to parse it and connect with the specified endpoints and credentials.</p>
+
+<p>Let’s see how to work with services:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># List all available services 
+cf marketplace
+
+# Check out an individual service offering
+cf marketplace -s [service-name]
+
+# List all available service instances in the space
+cf services
+
+# Create a new service instance with a plan (e.g. Free, Lite, Paid)
+cf create-service [service-name] [plan] [new-service-instance-name]
+
+# Delete a service instance
+cf delete-service [service-instance-name]
+
+# Bind a service instance to an app
+cf bind-service [app-name] [service-instance-name]
+
+# Unbind a service instance from an app
+cf unbind-service [app-name] [service-instance-name]
+</code></pre></div></div>
+
+<p>Cloud Foundry allows us to wrap existing/legacy systems (e.g. on-premise data bases) as service instance through the <strong>cups_command</strong>.</p>
+
+<p>Finally, an app can specify its service instance dependencies in the <em>manifest.yml</em> file, hence when pushed it will automatically bind to the respective service instances.</p>
 
 <p><br /></p>
 
