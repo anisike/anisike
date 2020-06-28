@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="/assets/css/main.css">
+    <link rel="stylesheet" href="/assets/css/font-awesome.min.css">
+
+    <link rel="shortcut icon" href="/favicon.ico?1">
+    <!-- Begin Jekyll SEO tag v2.5.0 -->
+<title>Spring Framework | Anisike</title>
+<meta name="generator" content="Jekyll v3.8.5" />
+<meta property="og:title" content="Spring Framework" />
+<meta name="author" content="Prashantha HJ" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="A website primarily intended for writing personal notes on the technologies I learn everyday." />
+<meta property="og:description" content="A website primarily intended for writing personal notes on the technologies I learn everyday." />
+<link rel="canonical" href="http://localhost:4000/docs/spring/" />
+<meta property="og:url" content="http://localhost:4000/docs/spring/" />
+<meta property="og:site_name" content="Anisike" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-06-28T15:02:50+02:00" />
+<script type="application/ld+json">
+{"@type":"WebPage","url":"http://localhost:4000/docs/spring/","author":{"@type":"Person","name":"Prashantha HJ"},"headline":"Spring Framework","dateModified":"2020-06-28T15:02:50+02:00","description":"A website primarily intended for writing personal notes on the technologies I learn everyday.","datePublished":"2020-06-28T15:02:50+02:00","@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+    <link rel="alternate" type="application/rss+xml" title="Anisike" href="http://localhost:4000/feed.xml" />
+</head>
+
+
+<body>
+
+    <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container navbar-container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+            <a class="navbar-brand" href="/">
+                <span><img src="/assets/img/logonav.png" alt="Logo"></span> Anisike
+            </a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+                <li  class="active" ><a href="/docs/home/">Docs</a></li>
+                <li ><a href="/blog/2020/05/03/HrfNotes/">Blog</a></li>
+            </ul>
+            <div class="navbar-right">
+                <form class="navbar-form navbar-left">
+                    <div class="form-group has-feedback">
+                        <input id="search-box" type="search" class="form-control" placeholder="Search...">
+                        <i class="fa fa-search form-control-feedback"></i>
+                    </div>
+                </form>
+                <ul class="nav navbar-nav">
+                    <li><a href="https:\\twitter.com\prashanthhj"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                    <li><a href="https:\\facebook.com\reachprashanth"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                    <li><a href="https:\\500px.com\photoprashanth"><i class="fa fa-500px" aria-hidden="true"></i></a></li>
+                    <li><a href="https:\\www.instagram.com\photoprashantha\"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</nav>
+
+
+    <div class="page-content">
+        <div class="wrapper">
+            <div class="container">
+    <div class="row">
+        <div class="col-md-4">
+          <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+  
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse-1" aria-expanded="false" aria-controls="collapse-1">
+            Java
+          </a>
+        </h4>
+      </div>
+      
+      
+      <div class="panel-collapse" id="collapse-1" role="tabpanel" aria-label="Side Navigation">
+        <div class="list-group">
+          
+            
+            
+            <a class="list-group-item active" href="/docs/spring/">Spring Framework</a>
+          
+            
+            
+            <a class="list-group-item " href="/docs/modernjava/">Modern Java</a>
+          
+            
+            
+            <a class="list-group-item " href="/docs/home/">All documents</a>
+          
+        </div>
+      </div>
+    </div>
+  
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse-2" aria-expanded="false" aria-controls="collapse-2">
+            Cloud Foundry
+          </a>
+        </h4>
+      </div>
+      
+      
+      <div class="panel-collapse collapse" id="collapse-2" role="tabpanel" aria-label="Side Navigation">
+        <div class="list-group">
+          
+            
+            
+            <a class="list-group-item " href="/docs/cloudfoundry/">Cloud Foundry</a>
+          
+        </div>
+      </div>
+    </div>
+  
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse-3" aria-expanded="false" aria-controls="collapse-3">
+            Database
+          </a>
+        </h4>
+      </div>
+      
+      
+      <div class="panel-collapse collapse" id="collapse-3" role="tabpanel" aria-label="Side Navigation">
+        <div class="list-group">
+          
+            
+            
+            <a class="list-group-item " href="/docs/sql/">SQL</a>
+          
+        </div>
+      </div>
+    </div>
+  
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse-4" aria-expanded="false" aria-controls="collapse-4">
+            Web Development
+          </a>
+        </h4>
+      </div>
+      
+      
+      <div class="panel-collapse collapse" id="collapse-4" role="tabpanel" aria-label="Side Navigation">
+        <div class="list-group">
+          
+            
+            
+            <a class="list-group-item " href="/docs/html/">HTML</a>
+          
+        </div>
+      </div>
+    </div>
+  
+</div>
+
+        </div>
+
+        <div class="col-md-8">
+            <h1>Spring Framework</h1>
+            <div id="markdown-content-container"><hr />
+<ol id="markdown-toc">
+  <li><a href="#basics" id="markdown-toc-basics">Basics</a>    <ol>
+      <li><a href="#ioc-container" id="markdown-toc-ioc-container">IOC Container</a>        <ol>
+          <li><a href="#introduction-to-the-spring-ioc-container-and-beans" id="markdown-toc-introduction-to-the-spring-ioc-container-and-beans">Introduction to the Spring IoC Container and Beans</a></li>
+          <li><a href="#container-overview" id="markdown-toc-container-overview">Container overview</a>            <ol>
+              <li><a href="#configuration-metadata" id="markdown-toc-configuration-metadata">Configuration metadata</a></li>
+              <li><a href="#instantiating-a-container" id="markdown-toc-instantiating-a-container">Instantiating a container</a>                <ol>
+                  <li><a href="#composing-xml-based-configuration-metadata" id="markdown-toc-composing-xml-based-configuration-metadata">Composing XML-based Configuration Metadata</a></li>
+                </ol>
+              </li>
+              <li><a href="#using-the-container" id="markdown-toc-using-the-container">Using the container</a></li>
+            </ol>
+          </li>
+          <li><a href="#bean-overview" id="markdown-toc-bean-overview">Bean overview</a>            <ol>
+              <li><a href="#naming-beans" id="markdown-toc-naming-beans">Naming beans</a>                <ol>
+                  <li><a href="#aliasing-a-bean-outside-the-bean-definition" id="markdown-toc-aliasing-a-bean-outside-the-bean-definition">Aliasing a Bean outside the Bean Definition</a></li>
+                </ol>
+              </li>
+              <li><a href="#instantiating-beans" id="markdown-toc-instantiating-beans">Instantiating beans</a>                <ol>
+                  <li><a href="#instantiating-with-constructors" id="markdown-toc-instantiating-with-constructors">Instantiating with Constructors</a></li>
+                  <li><a href="#instantiation-with-a-static-factory-method" id="markdown-toc-instantiation-with-a-static-factory-method">Instantiation with a Static Factory Method</a></li>
+                  <li><a href="#instantiation-by-using-an-instance-factory-method" id="markdown-toc-instantiation-by-using-an-instance-factory-method">Instantiation by Using an Instance Factory Method</a></li>
+                  <li><a href="#determining-a-beans-runtime-type" id="markdown-toc-determining-a-beans-runtime-type">Determining a Bean’s Runtime Type</a></li>
+                </ol>
+              </li>
+            </ol>
+          </li>
+          <li><a href="#dependencies" id="markdown-toc-dependencies">Dependencies</a></li>
+        </ol>
+      </li>
+    </ol>
+  </li>
+</ol>
+<hr />
+
+<h1 id="basics">Basics</h1>
+<h2 id="ioc-container">IOC Container</h2>
+<h3 id="introduction-to-the-spring-ioc-container-and-beans">Introduction to the Spring IoC Container and Beans</h3>
+
+<p>Generally Application code as below provides depenedency to the required Objects. Application controls the creation of dependency.
+Below code creates it’s own dependency.</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">SimpleMovieLister</span> <span class="o">{</span>
+   <span class="c1">// the SimpleMovieLister has a dependency on a MovieFinder</span>
+    <span class="kd">private</span> <span class="nc">MovieFinder</span> <span class="n">movieFinder</span><span class="o">;</span>
+    <span class="c1">// a constructor so that the Spring container can inject a MovieFinder</span>
+    <span class="kd">public</span> <span class="nf">SimpleMovieLister</span><span class="o">()</span> <span class="o">{</span>
+        <span class="k">this</span><span class="o">.</span><span class="na">movieFinder</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">SQLBasedMovieFinder</span><span class="o">();</span>
+    <span class="o">}</span>
+    <span class="c1">// business logic that actually uses the injected MovieFinder is omitted...</span>
+<span class="o">}</span>
+</code></pre></div></div>
+<p>In case of <strong>IOC containers</strong>, framework injects the dependencies with the help of some external configuration telling which objects need to be injected and where. It is inverse of Generally Application controlling dependency, hence Inverse of Control. Spring provides this feature at it’s core. This is also called <strong>Dependency Injection</strong>.</p>
+
+<p>Below code expects a dependency to be injected.</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">SimpleMovieLister</span> <span class="o">{</span>
+   <span class="c1">// the SimpleMovieLister has a dependency on a MovieFinder</span>
+    <span class="kd">private</span> <span class="nc">MovieFinder</span> <span class="n">movieFinder</span><span class="o">;</span>
+    <span class="c1">// a constructor so that the Spring container can inject a MovieFinder</span>
+    <span class="kd">public</span> <span class="nf">SimpleMovieLister</span><span class="o">(</span><span class="nc">MovieFinder</span> <span class="n">movieFinder</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">this</span><span class="o">.</span><span class="na">movieFinder</span> <span class="o">=</span> <span class="n">movieFinder</span><span class="o">;</span>
+    <span class="o">}</span>
+    <span class="c1">// business logic that actually uses the injected MovieFinder is omitted...</span>
+<span class="o">}</span>
+</code></pre></div></div>
+<p><strong>org.springframework.beans</strong> and <strong>org.springframework.context</strong> packages are the basis for Spring Framework’s IoC container.
+The <strong>BeanFactory</strong> interface provides an advanced configuration mechanism capable of managing any type of object. <strong>ApplicationContext</strong> is a sub-interface of BeanFactory. 
+<em>ApplicationContext</em> adds following functionalities.</p>
+<ul>
+  <li>Easier integration with spring’s AOP.</li>
+  <li>Message resource handling (i18n)</li>
+  <li>Event publication</li>
+  <li>Application layer specific contexts such as <strong>WebApplicationContext</strong></li>
+</ul>
+
+<p>In short, the <strong>BeanFactory</strong> provides the configuration framework and basic functionality, and the <strong>ApplicationContext</strong> adds more enterprise-specific functionality. The ApplicationContext is a complete superset of the BeanFactory.</p>
+
+<h3 id="container-overview">Container overview</h3>
+
+<p>The <strong>org.springframework.context.ApplicationContext</strong> interface represents the Spring IoC container and is responsible for instantiating, configuring, and assembling the beans. The container gets its instructions on what objects to instantiate, configure, and assemble by reading <strong>configuration metadata</strong>. The configuration metadata is represented in <strong>XML, Java annotations, or Java code</strong>. It lets you express the objects that compose your application and the rich interdependencies between those objects.</p>
+
+<p>Several implementations of the <strong>ApplicationContext</strong> interface are supplied with Spring. In stand-alone applications, it is common to create an instance of <strong>ClassPathXmlApplicationContext</strong> or <strong>FileSystemXmlApplicationContext.</strong>.</p>
+
+<h4 id="configuration-metadata">Configuration metadata</h4>
+
+<p>Spring configuration consists of at least one and typically more than one bean definition that the container must manage.</p>
+
+<p>These bean definitions correspond to the actual objects that make up your application. Typically, you define service layer objects, data access objects (DAOs), presentation objects such as Struts Action instances, infrastructure objects such as Hibernate SessionFactories, JMS Queues, and so forth. Typically, one does not configure fine-grained domain objects in the container, because it is usually the responsibility of DAOs and business logic to create and load domain objects. However, you can use Spring’s integration with AspectJ to configure objects that have been created outside the control of an IoC container.</p>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>
+<span class="nt">&lt;beans</span> <span class="na">xmlns=</span><span class="s">"http://www.springframework.org/schema/beans"</span>
+    <span class="na">xmlns:xsi=</span><span class="s">"http://www.w3.org/2001/XMLSchema-instance"</span>
+    <span class="na">xsi:schemaLocation=</span><span class="s">"http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd"</span><span class="nt">&gt;</span>
+
+    <span class="nt">&lt;bean</span> <span class="na">id=</span><span class="s">"..."</span> <span class="na">class=</span><span class="s">"..."</span><span class="nt">&gt;</span>  
+        <span class="c">&lt;!-- collaborators and configuration for this bean go here --&gt;</span>
+    <span class="nt">&lt;/bean&gt;</span>
+
+    <span class="nt">&lt;bean</span> <span class="na">id=</span><span class="s">"..."</span> <span class="na">class=</span><span class="s">"..."</span><span class="nt">&gt;</span>
+        <span class="c">&lt;!-- collaborators and configuration for this bean go here --&gt;</span>
+    <span class="nt">&lt;/bean&gt;</span>
+    <span class="c">&lt;!-- more bean definitions go here --&gt;</span>
+<span class="nt">&lt;/beans&gt;</span>
+</code></pre></div></div>
+
+<p>The <strong>id</strong> attribute is a string that identifies the individual bean definition.
+The <strong>class</strong> attribute defines the type of the bean and uses the fully qualified
+classname.</p>
+
+<h4 id="instantiating-a-container">Instantiating a container</h4>
+
+<p>The location path or paths supplied to an <strong>ApplicationContext</strong> constructor are resource strings that let the container load configuration metadata from a variety of external resources, such as the local file system, the Java CLASSPATH, and so on.</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">ApplicationContext</span> <span class="n">context</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">ClassPathXmlApplicationContext</span><span class="o">(</span><span class="s">"services.xml"</span><span class="o">,</span> <span class="s">"daos.xml"</span><span class="o">);</span>
+</code></pre></div></div>
+
+<p>The following example shows the service layer objects (services.xml) configuration file:</p>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>
+<span class="nt">&lt;beans</span> <span class="na">xmlns=</span><span class="s">"http://www.springframework.org/schema/beans"</span>
+    <span class="na">xmlns:xsi=</span><span class="s">"http://www.w3.org/2001/XMLSchema-instance"</span>
+    <span class="na">xsi:schemaLocation=</span><span class="s">"http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd"</span><span class="nt">&gt;</span>
+
+    <span class="c">&lt;!-- services --&gt;</span>
+
+    <span class="nt">&lt;bean</span> <span class="na">id=</span><span class="s">"petStore"</span> <span class="na">class=</span><span class="s">"org.springframework.samples.jpetstore.services.PetStoreServiceImpl"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;property</span> <span class="na">name=</span><span class="s">"accountDao"</span> <span class="na">ref=</span><span class="s">"accountDao"</span><span class="nt">/&gt;</span>
+        <span class="nt">&lt;property</span> <span class="na">name=</span><span class="s">"itemDao"</span> <span class="na">ref=</span><span class="s">"itemDao"</span><span class="nt">/&gt;</span>
+        <span class="c">&lt;!-- additional collaborators and configuration for this bean go here --&gt;</span>
+    <span class="nt">&lt;/bean&gt;</span>
+
+    <span class="c">&lt;!-- more bean definitions for services go here --&gt;</span>
+
+<span class="nt">&lt;/beans&gt;</span>
+</code></pre></div></div>
+
+<p>The following example shows the data access objects daos.xml file:</p>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>
+<span class="nt">&lt;beans</span> <span class="na">xmlns=</span><span class="s">"http://www.springframework.org/schema/beans"</span>
+    <span class="na">xmlns:xsi=</span><span class="s">"http://www.w3.org/2001/XMLSchema-instance"</span>
+    <span class="na">xsi:schemaLocation=</span><span class="s">"http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd"</span><span class="nt">&gt;</span>
+
+    <span class="nt">&lt;bean</span> <span class="na">id=</span><span class="s">"accountDao"</span>
+        <span class="na">class=</span><span class="s">"org.springframework.samples.jpetstore.dao.jpa.JpaAccountDao"</span><span class="nt">&gt;</span>
+        <span class="c">&lt;!-- additional collaborators and configuration for this bean go here --&gt;</span>
+    <span class="nt">&lt;/bean&gt;</span>
+
+    <span class="nt">&lt;bean</span> <span class="na">id=</span><span class="s">"itemDao"</span> <span class="na">class=</span><span class="s">"org.springframework.samples.jpetstore.dao.jpa.JpaItemDao"</span><span class="nt">&gt;</span>
+        <span class="c">&lt;!-- additional collaborators and configuration for this bean go here --&gt;</span>
+    <span class="nt">&lt;/bean&gt;</span>
+
+    <span class="c">&lt;!-- more bean definitions for data access objects go here --&gt;</span>
+
+<span class="nt">&lt;/beans&gt;</span>
+</code></pre></div></div>
+
+<p>In the preceding example, the service layer consists of the PetStoreServiceImpl class and two data access objects of the types JpaAccountDao and JpaItemDao (based on the JPA Object-Relational Mapping standard). The property name element refers to the name of the JavaBean property, and the ref element refers to the name of another bean definition. This linkage between id and ref elements expresses the dependency between collaborating objects.</p>
+
+<h5 id="composing-xml-based-configuration-metadata">Composing XML-based Configuration Metadata</h5>
+
+<p>It can be useful to have bean definitions span multiple XML files. Often, each individual XML configuration file represents a logical layer or module in your architecture.</p>
+
+<p>You can use the application context constructor to load bean definitions from all these XML fragments. This constructor takes multiple Resource locations, as was shown in the previous section. Alternatively, use one or more occurrences of the <import></import> element to load bean definitions from another file or files. The following example shows how to do so:</p>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;beans&gt;</span>
+    <span class="nt">&lt;import</span> <span class="na">resource=</span><span class="s">"services.xml"</span><span class="nt">/&gt;</span>
+    <span class="nt">&lt;import</span> <span class="na">resource=</span><span class="s">"resources/messageSource.xml"</span><span class="nt">/&gt;</span>
+    <span class="nt">&lt;import</span> <span class="na">resource=</span><span class="s">"/resources/themeSource.xml"</span><span class="nt">/&gt;</span>
+
+    <span class="nt">&lt;bean</span> <span class="na">id=</span><span class="s">"bean1"</span> <span class="na">class=</span><span class="s">"..."</span><span class="nt">/&gt;</span>
+    <span class="nt">&lt;bean</span> <span class="na">id=</span><span class="s">"bean2"</span> <span class="na">class=</span><span class="s">"..."</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;/beans&gt;</span>
+</code></pre></div></div>
+
+<p>In the preceding example, external bean definitions are loaded from three files: services.xml, messageSource.xml, and themeSource.xml. All location paths are relative to the definition file doing the importing, so services.xml must be in the same directory or classpath location as the file doing the importing, while messageSource.xml and themeSource.xml must be in a resources location below the location of the importing file. As you can see, a leading slash is ignored. However, given that these paths are relative, it is better form not to use the slash at all. The contents of the files being imported, including the top level <beans></beans> element, must be valid XML bean definitions, according to the Spring Schema.</p>
+
+<h4 id="using-the-container">Using the container</h4>
+
+<p>To read the beans</p>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code>		<span class="nc">ApplicationContext</span> <span class="n">context</span>  <span class="o">=</span> <span class="k">new</span> <span class="nc">ClassPathXmlApplicationContext</span><span class="o">(</span><span class="s">"com/prashantha/first/services.xml"</span><span class="o">);</span>
+		<span class="nc">StudentDataProvider</span> <span class="n">studentProvider</span> <span class="o">=</span> <span class="n">context</span><span class="o">.</span><span class="na">getBean</span><span class="o">(</span><span class="nc">StudentDataProvider</span><span class="o">.</span><span class="na">class</span><span class="o">);</span>
+		<span class="nc">Student</span> <span class="n">student</span> <span class="o">=</span> <span class="n">studentProvider</span><span class="o">.</span><span class="na">getMostAgedStudent</span><span class="o">();</span>
+		<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Oldest Student: "</span><span class="o">+</span> <span class="n">student</span><span class="o">);</span>
+		<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"All Students: "</span><span class="o">+</span><span class="n">studentProvider</span><span class="o">.</span><span class="na">getAllStudents</span><span class="o">());</span>
+</code></pre></div></div>
+
+<p>OR</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code>		<span class="nc">GenericApplicationContext</span> <span class="n">context</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">GenericApplicationContext</span><span class="o">();</span>
+		<span class="k">new</span> <span class="nf">XmlBeanDefinitionReader</span><span class="o">(</span><span class="n">context</span><span class="o">).</span><span class="na">loadBeanDefinitions</span><span class="o">(</span><span class="s">"com/prashantha/first/services.xml"</span><span class="o">);</span>
+		<span class="n">context</span><span class="o">.</span><span class="na">refresh</span><span class="o">();</span>
+		<span class="nc">StudentDataProvider</span> <span class="n">studentProvider</span> <span class="o">=</span> <span class="n">context</span><span class="o">.</span><span class="na">getBean</span><span class="o">(</span><span class="nc">StudentDataProvider</span><span class="o">.</span><span class="na">class</span><span class="o">);</span>
+		<span class="nc">Student</span> <span class="n">student</span> <span class="o">=</span> <span class="n">studentProvider</span><span class="o">.</span><span class="na">getMostAgedStudent</span><span class="o">();</span>
+		<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Oldest Student: "</span><span class="o">+</span> <span class="n">student</span><span class="o">);</span>
+		<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"All Students: "</span><span class="o">+</span><span class="n">studentProvider</span><span class="o">.</span><span class="na">getAllStudents</span><span class="o">());</span>
+</code></pre></div></div>
+
+<p>You can mix and match such reader delegates on the same ApplicationContext, reading bean definitions from diverse configuration sources.</p>
+
+<p>You can then use getBean to retrieve instances of your beans. The ApplicationContext interface has a few other methods for retrieving beans, but, ideally, your application code should never use them. Indeed, your application code should have no calls to the getBean() method at all and thus have no dependency on Spring APIs at all.</p>
+
+<h3 id="bean-overview">Bean overview</h3>
+
+<p>A Spring IoC container manages one or more beans. These beans are created with the configuration metadata that you supply to the container (for example, in the form of XML <bean></bean> definitions).</p>
+
+<p>Within the container itself, these bean definitions are represented as <strong>BeanDefinition</strong> objects, which contain (among other information) the following metadata:</p>
+
+<ul>
+  <li>A package-qualified class name: typically, the actual implementation class of the bean being defined.</li>
+  <li>Bean behavioral configuration elements, which state how the bean should behave in the container (scope, lifecycle callbacks, and so forth).</li>
+  <li>References to other beans that are needed for the bean to do its work. These references are also called collaborators or dependencies.</li>
+  <li>Other configuration settings to set in the newly created object — for example, the size limit of the pool or the number of connections to use in a bean that manages a connection pool.</li>
+</ul>
+
+<h4 id="naming-beans">Naming beans</h4>
+
+<p>Every bean has one or more identifiers. These identifiers must be unique within the container that hosts the bean. A bean usually has only one identifier. However, if it requires more than one, the extra ones can be considered aliases.</p>
+
+<p>You are not required to supply a name or an id for a bean. If you do not supply a name or id explicitly, the container generates a unique name for that bean. However, if you want to refer to that bean by name, through the use of the ref element or a Service Locator style lookup, you must provide a name. Motivations for not supplying a name are related to using inner beans and autowiring collaborators.</p>
+
+<h6 id="aliasing-a-bean-outside-the-bean-definition">Aliasing a Bean outside the Bean Definition</h6>
+
+<p>In a bean definition itself, you can supply more than one name for the bean, by using a combination of up to one name specified by the id attribute and any number of other names in the name attribute. These names can be equivalent aliases to the same bean and are useful for some situations, such as letting each component in an application refer to a common dependency by using a bean name that is specific to that component itself.</p>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;alias</span> <span class="na">name=</span><span class="s">"fromName"</span> <span class="na">alias=</span><span class="s">"toName"</span><span class="nt">/&gt;</span>
+</code></pre></div></div>
+
+<p>In this case, a bean (in the same container) named <strong>fromName</strong> may also, after the use of this alias definition, be referred to as <strong>toName</strong>.</p>
+<blockquote>
+  <p>If you use Javaconfiguration, the @Bean annotation can be used to provide aliases. See Using the @Bean Annotation for details.</p>
+</blockquote>
+
+<h4 id="instantiating-beans">Instantiating beans</h4>
+
+<p>A bean definition is essentially a recipe for creating one or more objects. The container looks at the recipe for a named bean when asked and uses the configuration metadata encapsulated by that bean definition to create (or acquire) an actual object.</p>
+
+<p>If you use XML-based configuration metadata, you specify the type (or class) of object that is to be instantiated in the class attribute of the <bean></bean> element. This class attribute (which, internally, is a Class property on a BeanDefinition instance) is usually mandatory. (For exceptions, see Instantiation by Using an Instance Factory Method and Bean Definition Inheritance.) You can use the Class property in one of two ways:</p>
+
+<ul>
+  <li>
+    <p>Typically, to specify the bean class to be constructed in the case where the container itself directly creates the bean by calling its constructor reflectively, somewhat equivalent to Java code with the new operator.</p>
+  </li>
+  <li>
+    <p>To specify the actual class containing the static factory method that is invoked to create the object, in the less common case where the container invokes a static factory method on a class to create the bean. The object type returned from the invocation of the static factory method may be the same class or another class entirely.</p>
+  </li>
+</ul>
+
+<h5 id="instantiating-with-constructors">Instantiating with Constructors</h5>
+
+<p>When you create a bean by the constructor approach, all normal classes are usable by and compatible with Spring. That is, the class being developed does not need to implement any specific interfaces or to be coded in a specific fashion. Simply specifying the bean class should suffice. However, depending on what type of IoC you use for that specific bean, you may need a default (empty) constructor.</p>
+
+<p>The Spring IoC container can manage virtually any class you want it to manage. It is not limited to managing true JavaBeans. Most Spring users prefer actual JavaBeans with only a default (no-argument) constructor and appropriate setters and getters modeled after the properties in the container. You can also have more exotic non-bean-style classes in your container. If, for example, you need to use a legacy connection pool that absolutely does not adhere to the JavaBean specification, Spring can manage it as well.</p>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;bean</span> <span class="na">id=</span><span class="s">"exampleBean"</span> <span class="na">class=</span><span class="s">"examples.ExampleBean"</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;bean</span> <span class="na">name=</span><span class="s">"anotherExample"</span> <span class="na">class=</span><span class="s">"examples.ExampleBeanTwo"</span><span class="nt">/&gt;</span>
+</code></pre></div></div>
+
+<h5 id="instantiation-with-a-static-factory-method">Instantiation with a Static Factory Method</h5>
+
+<p>When defining a bean that you create with a static factory method, use the class attribute to specify the class that contains the static factory method and an attribute named factory-method to specify the name of the factory method itself. You should be able to call this method (with optional arguments, as described later) and return a live object, which subsequently is treated as if it had been created through a constructor. One use for such a bean definition is to call static factories in legacy code.</p>
+
+<p>The following bean definition specifies that the bean be created by calling a factory method. The definition does not specify the type (class) of the returned object, only the class containing the factory method. In this example, the createInstance() method must be a static method. The following example shows how to specify a factory method:</p>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;bean</span> <span class="na">id=</span><span class="s">"clientService"</span>
+    <span class="na">class=</span><span class="s">"examples.ClientService"</span>
+    <span class="na">factory-method=</span><span class="s">"createInstance"</span><span class="nt">/&gt;</span>
+</code></pre></div></div>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="kd">public</span> <span class="kd">class</span> <span class="nc">ClientService</span> <span class="o">{</span>
+    <span class="kd">private</span> <span class="kd">static</span> <span class="nc">ClientService</span> <span class="n">clientService</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">ClientService</span><span class="o">();</span>
+    <span class="kd">private</span> <span class="nf">ClientService</span><span class="o">()</span> <span class="o">{}</span>
+
+    <span class="kd">public</span> <span class="kd">static</span> <span class="nc">ClientService</span> <span class="nf">createInstance</span><span class="o">()</span> <span class="o">{</span>
+        <span class="k">return</span> <span class="n">clientService</span><span class="o">;</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<h5 id="instantiation-by-using-an-instance-factory-method">Instantiation by Using an Instance Factory Method</h5>
+
+<p>Similar to instantiation through a static factory method, instantiation with an instance factory method invokes a non-static method of an existing bean from the container to create a new bean. To use this mechanism, leave the class attribute empty and, in the factory-bean attribute, specify the name of a bean in the current (or parent or ancestor) container that contains the instance method that is to be invoked to create the object. Set the name of the factory method itself with the factory-method attribute. The following example shows how to configure such a bean:</p>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">&lt;!-- the factory bean, which contains a method called createInstance() --&gt;</span>
+<span class="nt">&lt;bean</span> <span class="na">id=</span><span class="s">"serviceLocator"</span> <span class="na">class=</span><span class="s">"examples.DefaultServiceLocator"</span><span class="nt">&gt;</span>
+    <span class="c">&lt;!-- inject any dependencies required by this locator bean --&gt;</span>
+<span class="nt">&lt;/bean&gt;</span>
+
+<span class="c">&lt;!-- the bean to be created via the factory bean --&gt;</span>
+<span class="nt">&lt;bean</span> <span class="na">id=</span><span class="s">"clientService"</span>
+    <span class="na">factory-bean=</span><span class="s">"serviceLocator"</span>
+    <span class="na">factory-method=</span><span class="s">"createClientServiceInstance"</span><span class="nt">/&gt;</span>
+</code></pre></div></div>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">DefaultServiceLocator</span> <span class="o">{</span>
+
+    <span class="kd">private</span> <span class="kd">static</span> <span class="nc">ClientService</span> <span class="n">clientService</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">ClientServiceImpl</span><span class="o">();</span>
+
+    <span class="kd">public</span> <span class="nc">ClientService</span> <span class="nf">createClientServiceInstance</span><span class="o">()</span> <span class="o">{</span>
+        <span class="k">return</span> <span class="n">clientService</span><span class="o">;</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p>One factory class can also hold more than one factory method, as the following example shows:</p>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;bean</span> <span class="na">id=</span><span class="s">"serviceLocator"</span> <span class="na">class=</span><span class="s">"examples.DefaultServiceLocator"</span><span class="nt">&gt;</span>
+    <span class="c">&lt;!-- inject any dependencies required by this locator bean --&gt;</span>
+<span class="nt">&lt;/bean&gt;</span>
+
+<span class="nt">&lt;bean</span> <span class="na">id=</span><span class="s">"clientService"</span>
+    <span class="na">factory-bean=</span><span class="s">"serviceLocator"</span>
+    <span class="na">factory-method=</span><span class="s">"createClientServiceInstance"</span><span class="nt">/&gt;</span>
+
+<span class="nt">&lt;bean</span> <span class="na">id=</span><span class="s">"accountService"</span>
+    <span class="na">factory-bean=</span><span class="s">"serviceLocator"</span>
+    <span class="na">factory-method=</span><span class="s">"createAccountServiceInstance"</span><span class="nt">/&gt;</span>
+</code></pre></div></div>
+
+<p>The following example shows the corresponding class:</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">DefaultServiceLocator</span> <span class="o">{</span>
+
+    <span class="kd">private</span> <span class="kd">static</span> <span class="nc">ClientService</span> <span class="n">clientService</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">ClientServiceImpl</span><span class="o">();</span>
+
+    <span class="kd">private</span> <span class="kd">static</span> <span class="nc">AccountService</span> <span class="n">accountService</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">AccountServiceImpl</span><span class="o">();</span>
+
+    <span class="kd">public</span> <span class="nc">ClientService</span> <span class="nf">createClientServiceInstance</span><span class="o">()</span> <span class="o">{</span>
+        <span class="k">return</span> <span class="n">clientService</span><span class="o">;</span>
+    <span class="o">}</span>
+
+    <span class="kd">public</span> <span class="nc">AccountService</span> <span class="nf">createAccountServiceInstance</span><span class="o">()</span> <span class="o">{</span>
+        <span class="k">return</span> <span class="n">accountService</span><span class="o">;</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<h5 id="determining-a-beans-runtime-type">Determining a Bean’s Runtime Type</h5>
+
+<p>The runtime type of a specific bean is non-trivial to determine. A specified class in the bean metadata definition is just an initial class reference, potentially combined with a declared factory method or being a FactoryBean class which may lead to a different runtime type of the bean, or not being set at all in case of an instance-level factory method (which is resolved via the specified factory-bean name instead). Additionally, AOP proxying may wrap a bean instance with an interface-based proxy with limited exposure of the target bean’s actual type (just its implemented interfaces).</p>
+
+<p>The recommended way to find out about the actual runtime type of a particular bean is a BeanFactory.getType call for the specified bean name. This takes all of the above cases into account and returns the type of object that a BeanFactory.getBean call is going to return for the same bean name.</p>
+
+<h3 id="dependencies">Dependencies</h3>
+</div>
+            <div style="clear:both;">
+              <p class="text-center">
+                <br />
+                <a target="_blank" href="/_docs/java/spring.md" class="btn btn-default" role="button">
+                  <i class="fa fa-pencil fa-lg"></i> Improve this page
+                </a>
+              </p>
+            </div>
+            <hr>
+            
+
+
+
+
+
+  
+  
+    <ul class="pager">
+      
+        <li class="previous disabled">
+          <a>
+            <span aria-hidden="true">&larr;</span> Previous
+          </a>
+        </li>
+      
+
+      
+        
+        
+        <li class="next">
+          <a href="/docs/modernjava/">
+            Next <span aria-hidden="true">&rarr;</span>
+          </a>
+        </li>
+      
+      </ul>
+    <div class="clear"></div>
+    
+
+        </div>
+
+    </div>
+</div>
+
+        </div>
+    </div>
+
+    <footer class="footer">
+    <div class="container">
+
+        <p class="text-center">
+            Anisike 2020 |
+            Powered by <a href="https://github.com/aksakalli/jekyll-doc-theme">Jekyll Doc Theme</a>
+        </p>
+        <!-- <p class="text-muted">Place sticky footer content here.</p> -->
+    </div>
+</footer>
+
+    <script>
+  var baseurl = ''
+</script>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+<script src="/assets/js/bootstrap.min.js "></script>
+<script src="/assets/js/typeahead.bundle.min.js "></script>
+
+<script src="/assets/js/main.js "></script>
+
+</body>
+
+</html>
